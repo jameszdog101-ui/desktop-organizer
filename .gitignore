@@ -1,6 +1,7 @@
 **/bin/
 **/obj/
 artifacts/
+publish/
 work/.dotnet/
 work/.nuget/
 work/dotnet-install.ps1
