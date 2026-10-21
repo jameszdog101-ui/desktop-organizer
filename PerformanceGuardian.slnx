@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="PerformanceGuardian/PerformanceGuardian.csproj" />
+  <Project Path="tests/SmartDesktopGuardian.Tests/SmartDesktopGuardian.Tests.csproj" />
+</Solution>
