@@ -1,0 +1,19 @@
+请打开并处理以下本地专案：
+
+C:\Users\James Chen\Desktop\desktop-organizer
+
+这是 Smart Desktop Guardian｜智慧桌面管家的可编译 WPF 专案。核心功能、隔离测试和安装程序骨架已经完成。
+
+开始前请完整阅读：
+UI-HANDOFF-ANTIGRAVITY.md
+
+本次任务只负责 UI/UX：
+- 重新设计首页、文件整理、效能优化、活动纪录、设定与说明画面。
+- 使用 Windows 11 Fluent Design，繁体中文优先。
+- 改善排版、视觉层级、图示、主题、状态呈现、响应式布局及可存取性。
+- 可以修改 MainWindow.xaml、App.xaml，并新增 UI 专用资源、View 或 ViewModel。
+- 保留现有 Binding、Click 事件与核心服务行为。
+
+不要执行真实桌面整理、不要执行安装程序、不要改变文件分类规则、不要加入强制关闭程序、清空 RAM、桌面图示锁定或自动排版。
+
+完成后执行 README.md 所列的建置与隔离测试，并将 UI 变更作为一个独立 Git commit 提交。不要改写或压缩既有 Git 历史。
