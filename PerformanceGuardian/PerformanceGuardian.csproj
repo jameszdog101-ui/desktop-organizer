@@ -7,6 +7,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Resources\Brand\SmartDesktopGuardian.ico</ApplicationIcon>
     <AssemblyName>SmartDesktopGuardian</AssemblyName>
     <RootNamespace>PerformanceGuardian</RootNamespace>
     <Platforms>x64</Platforms>
@@ -17,6 +18,11 @@
     <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
     <NuGetAudit>false</NuGetAudit>
   </PropertyGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Brand\*.ico" />
+    <Resource Include="Resources\Brand\*.png" />
+    <Resource Include="Resources\Brand\*.svg" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="WPF-UI" Version="4.3.0" />
   </ItemGroup>

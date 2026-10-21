@@ -9,24 +9,8 @@
       <ResourceDictionary.MergedDictionaries>
         <ui:ThemesDictionary Theme="Light" />
         <ui:ControlsDictionary />
+        <ResourceDictionary Source="pack://application:,,,/SmartDesktopGuardian;component/Themes/BrandTheme.xaml" />
       </ResourceDictionary.MergedDictionaries>
-      <SolidColorBrush x:Key="AccentBrush" Color="#0D9488" />
-      <SolidColorBrush x:Key="WarningBrush" Color="#D97706" />
-      <SolidColorBrush x:Key="CardBrush" Color="#F4F6F8" />
-      <Style x:Key="CardStyle" TargetType="Border">
-        <Setter Property="Background" Value="{StaticResource CardBrush}" />
-        <Setter Property="CornerRadius" Value="14" />
-        <Setter Property="Padding" Value="18" />
-      </Style>
-      <Style x:Key="MetricBarStyle" TargetType="ProgressBar">
-        <Setter Property="Height" Value="7" />
-        <Setter Property="Maximum" Value="100" />
-        <Setter Property="Foreground" Value="{StaticResource AccentBrush}" />
-        <Setter Property="Background" Value="#DDE2E7" />
-        <Style.Triggers>
-          <Trigger Property="Value" Value="100"><Setter Property="Foreground" Value="{StaticResource WarningBrush}" /></Trigger>
-        </Style.Triggers>
-      </Style>
     </ResourceDictionary>
   </Application.Resources>
 </Application>

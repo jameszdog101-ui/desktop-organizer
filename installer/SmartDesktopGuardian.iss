@@ -19,6 +19,9 @@ OutputBaseFilename=SmartDesktopGuardian-Setup-x64
 Compression=lzma2/ultra64
 SolidCompression=yes
 WizardStyle=modern
+SetupIconFile=..\PerformanceGuardian\Resources\Brand\SmartDesktopGuardian.ico
+WizardImageFile=..\PerformanceGuardian\Resources\Brand\installer-banner.bmp
+WizardSmallImageFile=..\PerformanceGuardian\Resources\Brand\installer-small.bmp
 UninstallDisplayIcon={app}\{#MyAppExeName}
 SetupLogging=yes
 
@@ -33,9 +36,9 @@ Name: "startup"; Description: "随 Windows 登录启动"; GroupDescription: "附
 Source: "..\publish\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
-Name: "{group}\智慧桌面管家"; Filename: "{app}\{#MyAppExeName}"
+Name: "{group}\智慧桌面管家"; Filename: "{app}\{#MyAppExeName}"; IconFilename: "{app}\{#MyAppExeName}"
 Name: "{group}\使用说明"; Filename: "{app}\桌面整理工具说明书 Manual.txt"
-Name: "{autodesktop}\智慧桌面管家"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
+Name: "{autodesktop}\智慧桌面管家"; Filename: "{app}\{#MyAppExeName}"; IconFilename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
 
 [Registry]
 Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; ValueType: string; ValueName: "SmartDesktopGuardian"; ValueData: """{app}\{#MyAppExeName}"""; Tasks: startup; Flags: uninsdeletevalue

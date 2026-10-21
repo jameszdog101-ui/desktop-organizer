@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 200" width="820" height="200" fill="none">
+  <rect width="820" height="200" rx="24" fill="#0F172A"/>
+  <g transform="translate(16, 12) scale(0.7)">
+    <path d="M28 64C28 50.745 38.745 40 52 40H102C109.4 40 116.3 43.4 120.8 49.2L132 64H204C217.255 64 228 74.745 228 88V188C228 201.255 217.255 212 204 212H52C38.745 212 28 201.255 28 188V64Z" fill="#0D9488"/>
+    <rect x="48" y="60" width="144" height="36" rx="8" fill="#99F6E4"/>
+    <rect x="28" y="80" width="200" height="132" rx="24" fill="#14B8A6"/>
+    <path d="M128 96L184 116V154C184 186.5 160.2 213.8 128 224C95.8 213.8 72 186.5 72 154V116L128 96Z" fill="#0F172A" stroke="#99F6E4" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M128 110L170 125V153C170 178.2 152.1 199.6 128 208.2C103.9 199.6 86 178.2 86 153V125L128 110Z" fill="#134E4A"/>
+    <path d="M102 156H114L123 170L137 140L145 156H154" stroke="#5EEAD4" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="212" y="76" font-family="Segoe UI, Microsoft JhengHei UI, sans-serif" font-size="38" font-weight="700" fill="#F8FAFC">Smart Desktop Guardian</text>
+  <text x="214" y="122" font-family="Microsoft JhengHei UI, Segoe UI, sans-serif" font-size="27" font-weight="700" fill="#5EEAD4">智慧桌面管家</text>
+  <text x="215" y="158" font-family="Microsoft JhengHei UI, Segoe UI, sans-serif" font-size="18" font-weight="500" fill="#94A3B8">桌面文件自動歸檔  ·  電腦效能安全守護</text>
+</svg>

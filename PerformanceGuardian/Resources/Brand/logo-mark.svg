@@ -1,0 +1,16 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
+  <!-- Back Folder Tab -->
+  <path d="M28 64C28 50.745 38.745 40 52 40H102C109.4 40 116.3 43.4 120.8 49.2L132 64H204C217.255 64 228 74.745 228 88V188C228 201.255 217.255 212 204 212H52C38.745 212 28 201.255 28 188V64Z" fill="#0F766E"/>
+  <!-- Document Sheet Peek -->
+  <rect x="48" y="60" width="144" height="36" rx="8" fill="#CCFBF1"/>
+  <!-- Front Folder Body -->
+  <rect x="28" y="80" width="200" height="132" rx="24" fill="#0D9488"/>
+  <!-- Subtle Top Highlight on Folder Front -->
+  <path d="M52 80H204C217.255 80 228 90.745 228 104V108C228 94.745 217.255 84 204 84H52C38.745 84 28 94.745 28 108V104C28 90.745 38.745 80 52 80Z" fill="#14B8A6"/>
+  <!-- Guardian Shield (Bottom-Right / Center Integrated) -->
+  <path d="M128 96L184 116V154C184 186.5 160.2 213.8 128 224C95.8 213.8 72 186.5 72 154V116L128 96Z" fill="#F8FAFC" stroke="#0F766E" stroke-width="8" stroke-linejoin="round"/>
+  <!-- Shield Inner Accent -->
+  <path d="M128 110L170 125V153C170 178.2 152.1 199.6 128 208.2C103.9 199.6 86 178.2 86 153V125L128 110Z" fill="#CCFBF1"/>
+  <!-- Safe Check-Pulse Line Inside Shield -->
+  <path d="M102 156H114L123 170L137 140L145 156H154" stroke="#0F766E" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
