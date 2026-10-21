@@ -86,6 +86,6 @@ public sealed class UiPreferences
     public bool StartMinimizedPreference { get; set; } = false;
     public bool MinimizeToTrayOnClose { get; set; } = true;
     public string ThemeMode { get; set; } = "Light";
-    public string LanguageMode { get; set; } = "zh-TW";
+    public string LanguageMode { get; set; } = "繁體中文";
     public bool DuplicateCheckEnabled { get; set; } = true;
 }

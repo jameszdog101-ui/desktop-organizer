@@ -43,30 +43,30 @@ public partial class MainWindow : INotifyPropertyChanged
     private double _diskFreePercent = 100;
     private ulong _availableMemoryMb;
     private string _diskProfile = "256 GB SSD 最佳化";
-    private string _statusText = "正在建立效能基准…";
-    private string _foregroundText = "前景程式：侦测中";
-    private string _foregroundProcessName = "侦测中";
-    private string _organizerStatus = "尚未执行整理。";
+    private string _statusText = "正在建立效能基準…";
+    private string _foregroundText = "前景程式：偵測中";
+    private string _foregroundProcessName = "偵測中";
+    private string _organizerStatus = "尚未執行整理。";
 
     // Navigation & interactive state fields
     private string _selectedPage = "Home";
     private string _selectedHomeStatePreview = "Auto";
-    private string _organizerInteractiveStateBadge = "尚无资料状态";
+    private string _organizerInteractiveStateBadge = "尚無資料狀態";
     private string _organizerInteractiveStateTone = "Neutral";
-    private string _organizerInteractiveStateDetail = "待命就绪：点击「立即整理」或开启自动整理以扫描桌面文书档案。";
+    private string _organizerInteractiveStateDetail = "待命就緒：點擊「立即整理」或開啟自動整理以掃描桌面文書檔案。";
     private int _undoableBatchCount;
     private int _undoableFileCount;
     private int _todayOrganizedCount;
 
     // Rescue comparison fields
     private bool _hasRescueReport;
-    private string _rescueCpuComparison = "尚未执行效能急救（点击上方「立即效能急救」产生介入前后对比）";
-    private string _rescueRamComparison = "尚未执行效能急救";
-    private string _rescueSsdComparison = "尚未执行效能急救";
-    private string _rescueActionsSummary = "尚无介入纪录；本工具仅在资源竞争时暂时调整非系统背景程式优先权。";
-    private string _rescueImprovementBadge = "等待诊断";
+    private string _rescueCpuComparison = "尚未執行效能急救（點擊上方「立即效能急救」產生介入前後對比）";
+    private string _rescueRamComparison = "尚未執行效能急救";
+    private string _rescueSsdComparison = "尚未執行效能急救";
+    private string _rescueActionsSummary = "尚無介入紀錄；本工具僅在資源競爭時暫時調整非系統背景程式優先權。";
+    private string _rescueImprovementBadge = "等待診斷";
     private string _rescueImprovementTone = "Neutral";
-    private string _rescueNoImprovementReason = "若介入后未观察到明显下降，通常代表负载来自您正在操作的前景应用程式或 Windows 核心磁碟作业；为确保工作资料安全，本程式绝不强制关闭应用程式或清空记忆体。";
+    private string _rescueNoImprovementReason = "若介入後未觀察到明顯下降，通常代表負載來自您正在操作的前景應用程式或 Windows 核心磁碟作業；為確保工作資料安全，本程式絕不強制關閉應用程式或清空記憶體。";
 
     // Activity log fields
     private string _selectedActivityFilter = "全部";
@@ -114,7 +114,7 @@ public partial class MainWindow : INotifyPropertyChanged
     public string DataDirectoryDisplay => _settingsService.DataDirectory;
 
     public string PathSummary =>
-        $"程序：{AppContext.BaseDirectory}\n桌面：{DesktopPath}\n整理资料夹：{OrganizedPath}\n设定档：{SettingsFilePathDisplay}\n日志路径：{LogFilePathDisplay}";
+        $"程式：{AppContext.BaseDirectory}\n桌面：{DesktopPath}\n整理資料夾：{OrganizedPath}\n設定檔：{SettingsFilePathDisplay}\n日誌路徑：{LogFilePathDisplay}";
 
     public bool AutoOrganizeEnabled
     {
@@ -133,8 +133,8 @@ public partial class MainWindow : INotifyPropertyChanged
     }
 
     public string OrganizerSummary => AutoOrganizeEnabled
-        ? $"已开启，每 {_organizerSettings.ScanIntervalMinutes} 分钟检查；新文件等待 {_organizerSettings.NewFileWaitMinutes} 分钟后依 yyyy年MM月 归档。"
-        : "自动整理已暂停，可随时手动执行立即整理。";
+        ? $"已開啟，每 {_organizerSettings.ScanIntervalMinutes} 分鐘檢查；新文件等待 {_organizerSettings.NewFileWaitMinutes} 分鐘後依 yyyy年MM月 歸檔。"
+        : "自動整理已暫停，可隨時手動執行立即整理。";
 
     public string OrganizerStatus
     {
@@ -202,7 +202,7 @@ public partial class MainWindow : INotifyPropertyChanged
     public string MemoryDisplay => $"{MemoryPercent:0}%";
     public string DiskDisplay => $"{DiskPercent:0}%";
     public string AvailableMemoryDisplay => $"可用 {AvailableMemoryMb:N0} MB";
-    public string DiskFreeDisplay => $"可用空间 {DiskFreePercent:0}%（{DiskProfile}）";
+    public string DiskFreeDisplay => $"可用空間 {DiskFreePercent:0}%（{DiskProfile}）";
 
     public bool IsMonitoring => _monitorCancellation is not null;
 
@@ -217,8 +217,8 @@ public partial class MainWindow : INotifyPropertyChanged
         }
     }
 
-    public string MonitorButtonText => IsMonitoring ? "停止背景监控" : "开始背景监控";
-    public string MonitorBadgeText => IsMonitoring ? "背景智慧监控运作中" : "背景监控未启动";
+    public string MonitorButtonText => IsMonitoring ? "停止背景監控" : "開始背景監控";
+    public string MonitorBadgeText => IsMonitoring ? "背景智慧監控運作中" : "背景監控未啟動";
     public string MonitorBadgeTone => IsMonitoring ? "Normal" : "Neutral";
     public bool CanRescue => !_isBusy;
 
@@ -243,14 +243,14 @@ public partial class MainWindow : INotifyPropertyChanged
     // =========================================================
     // Home Page Properties & 6 Required States
     // =========================================================
-    public string OrganizerAutoStateBadge => AutoOrganizeEnabled ? "自动整理已开启" : "自动整理已暂停";
+    public string OrganizerAutoStateBadge => AutoOrganizeEnabled ? "自動整理已開啟" : "自動整理已暫停";
     public string OrganizerAutoStateTone => AutoOrganizeEnabled ? "Normal" : "Warning";
 
     public string LastScanTimeDisplay => _lastScanTime.HasValue
         ? _lastScanTime.Value.ToLocalTime().ToString("yyyy-MM-dd HH:mm:ss")
-        : "尚无扫描纪录";
+        : "尚無掃描紀錄";
 
-    public string TodayOrganizedCountDisplay => $"{_todayOrganizedCount} 个文件";
+    public string TodayOrganizedCountDisplay => $"{_todayOrganizedCount} 個文件";
     public string OrganizedFolderNameDisplay => _organizerSettings.OrganizedFolderName;
 
     public int[] ScanIntervalOptions { get; } = [5, 10, 15, 30, 60];
@@ -260,7 +260,7 @@ public partial class MainWindow : INotifyPropertyChanged
     public int[] CooldownMinuteOptions { get; } = [3, 5, 10, 15];
     public int[] SsdThresholdOptions { get; } = [10, 15, 20, 25];
     public string[] ThemeOptions { get; } = ["Light", "Dark"];
-    public string[] LanguageOptions { get; } = ["繁體中文", "简体中文"];
+    public string[] LanguageOptions { get; } = ["繁體中文"];
 
     public string SelectedHomeStatePreview
     {
@@ -279,36 +279,36 @@ public partial class MainWindow : INotifyPropertyChanged
         get
         {
             if (_selectedHomeStatePreview != "Auto") return _selectedHomeStatePreview;
-            if (_isBusy || _isOrganizing) return "正在处理状态";
-            if (_hasPerformanceError || _hasOrganizerError) return "错误状态";
-            if (!_hasMetricsSample) return "尚无资料状态";
-            if (CpuPercent >= 90 || MemoryPercent >= 85 || DiskPercent >= 90) return "高负载状态";
+            if (_isBusy || _isOrganizing) return "正在處理狀態";
+            if (_hasPerformanceError || _hasOrganizerError) return "錯誤狀態";
+            if (!_hasMetricsSample) return "尚無資料狀態";
+            if (CpuPercent >= 90 || MemoryPercent >= 85 || DiskPercent >= 90) return "高負載狀態";
             if (CpuPercent >= 75 || MemoryPercent >= 75 || DiskPercent >= 75 || DiskFreePercent < _uiPrefs.SsdWarningThresholdPercent || !AutoOrganizeEnabled)
-                return "注意状态";
-            return "正常状态";
+                return "注意狀態";
+            return "正常狀態";
         }
     }
 
     public string OverallSystemStateTone => OverallSystemStateBadge switch
     {
-        "正常状态" => "Normal",
-        "注意状态" => "Warning",
-        "高负载状态" => "Error",
-        "正在处理状态" => "Processing",
-        "错误状态" => "Error",
+        "正常狀態" => "Normal",
+        "注意狀態" => "Warning",
+        "高負載狀態" => "Error",
+        "正在處理狀態" => "Processing",
+        "錯誤狀態" => "Error",
         _ => "Neutral"
     };
 
     public string OverallSystemStateDescription => OverallSystemStateBadge switch
     {
-        "正常状态" => "系统资源充裕，CPU、RAM 与 SSD I/O 皆在健康范围，文件整理待命正常。",
-        "注意状态" => !AutoOrganizeEnabled
-            ? "自动整理目前已暂停；或部分资源接近注意门槛，建议留意可用空间与背景程式。"
-            : "部分指标偏高或 SSD 剩余空间接近警告门槛，建议保持背景智慧监控开启。",
-        "高负载状态" => "侦测到 CPU、RAM 或 SSD 处于高负载压力，建议点击「立即效能急救」执行安全优先权调度。",
-        "正在处理状态" => "正在执行桌面文件整理或安全效能调度作业，请稍候…",
-        "错误状态" => "最近一次操作发生异常，请查看「活动纪录」了解详细原因。",
-        _ => "正在初始化感测器与桌面整理状态，尚未产生历史纪录。"
+        "正常狀態" => "系統資源充裕，CPU、RAM 與 SSD I/O 皆在健康範圍，文件整理待命正常。",
+        "注意狀態" => !AutoOrganizeEnabled
+            ? "自動整理目前已暫停；或部分資源接近注意門檻，建議留意可用空間與背景程式。"
+            : "部分指標偏高或 SSD 剩餘空間接近警告門檻，建議保持背景智慧監控開啟。",
+        "高負載狀態" => "偵測到 CPU、RAM 或 SSD 處於高負載壓力，建議點擊「立即效能急救」執行安全優先權調度。",
+        "正在處理狀態" => "正在執行桌面文件整理或安全效能調度作業，請稍候…",
+        "錯誤狀態" => "最近一次操作發生異常，請查看「活動紀錄」了解詳細原因。",
+        _ => "正在初始化感測器與桌面整理狀態，尚未產生歷史紀錄。"
     };
 
     public string HomeOrganizerCardStateBadge
@@ -316,21 +316,21 @@ public partial class MainWindow : INotifyPropertyChanged
         get
         {
             if (_selectedHomeStatePreview != "Auto") return _selectedHomeStatePreview;
-            if (_isOrganizing) return "正在处理状态";
-            if (_hasOrganizerError) return "错误状态";
-            if (!AutoOrganizeEnabled) return "注意状态";
-            if (_lastScanTime is null && RecentOrganizedItems.Count == 0) return "尚无资料状态";
-            return "正常状态";
+            if (_isOrganizing) return "正在處理狀態";
+            if (_hasOrganizerError) return "錯誤狀態";
+            if (!AutoOrganizeEnabled) return "注意狀態";
+            if (_lastScanTime is null && RecentOrganizedItems.Count == 0) return "尚無資料狀態";
+            return "正常狀態";
         }
     }
 
     public string HomeOrganizerCardStateTone => HomeOrganizerCardStateBadge switch
     {
-        "正常状态" => "Normal",
-        "注意状态" => "Warning",
-        "高负载状态" => "Error",
-        "正在处理状态" => "Processing",
-        "错误状态" => "Error",
+        "正常狀態" => "Normal",
+        "注意狀態" => "Warning",
+        "高負載狀態" => "Error",
+        "正在處理狀態" => "Processing",
+        "錯誤狀態" => "Error",
         _ => "Neutral"
     };
 
@@ -346,8 +346,8 @@ public partial class MainWindow : INotifyPropertyChanged
     public bool CanUndo => !_isOrganizing && _undoableBatchCount > 0;
 
     public string UndoStatusBadge => _undoableBatchCount > 0
-        ? $"可以复原（最近一批 {_undoableFileCount} 个文件，共保存 {_undoableBatchCount} 批纪录）"
-        : "没有可复原纪录";
+        ? $"可以復原（最近一批 {_undoableFileCount} 個文件，共保存 {_undoableBatchCount} 批紀錄）"
+        : "沒有可復原紀錄";
 
     public string UndoStatusTone => _undoableBatchCount > 0 ? "Normal" : "Neutral";
 
@@ -414,24 +414,24 @@ public partial class MainWindow : INotifyPropertyChanged
         }
     }
 
-    public string ScanIntervalDisplay => $"每 {ScanIntervalMinutes} 分钟";
-    public string NewFileWaitDisplay => $"{NewFileWaitMinutes} 分钟";
+    public string ScanIntervalDisplay => $"每 {ScanIntervalMinutes} 分鐘";
+    public string NewFileWaitDisplay => $"{NewFileWaitMinutes} 分鐘";
     public string SupportedFormatsSummary => "PDF、DOC、DOCX、XLS、XLSX、CSV、PPT、PPTX、TXT、RTF、MD、ODT、ODS、ODP、HWP";
 
     // =========================================================
     // Performance Page Properties & Before/After Comparison
     // =========================================================
-    public string CpuStateLabel => CpuPercent >= 90 ? "高负载状态" : CpuPercent >= 75 ? "注意状态" : "正常状态";
+    public string CpuStateLabel => CpuPercent >= 90 ? "高負載狀態" : CpuPercent >= 75 ? "注意狀態" : "正常狀態";
     public string CpuStateTone => CpuPercent >= 90 ? "Error" : CpuPercent >= 75 ? "Warning" : "Normal";
 
-    public string MemoryStateLabel => MemoryPercent >= 85 ? "高负载状态" : MemoryPercent >= 75 ? "注意状态" : "正常状态";
+    public string MemoryStateLabel => MemoryPercent >= 85 ? "高負載狀態" : MemoryPercent >= 75 ? "注意狀態" : "正常狀態";
     public string MemoryStateTone => MemoryPercent >= 85 ? "Error" : MemoryPercent >= 75 ? "Warning" : "Normal";
 
-    public string DiskStateLabel => DiskPercent >= 90 ? "高负载状态" : (DiskPercent >= 75 || DiskFreePercent < _uiPrefs.SsdWarningThresholdPercent) ? "注意状态" : "正常状态";
+    public string DiskStateLabel => DiskPercent >= 90 ? "高負載狀態" : (DiskPercent >= 75 || DiskFreePercent < _uiPrefs.SsdWarningThresholdPercent) ? "注意狀態" : "正常狀態";
     public string DiskStateTone => DiskPercent >= 90 ? "Error" : (DiskPercent >= 75 || DiskFreePercent < _uiPrefs.SsdWarningThresholdPercent) ? "Warning" : "Normal";
 
     public string LastInterventionDisplay => _lastIntervention == DateTimeOffset.MinValue
-        ? "尚无介入纪录"
+        ? "尚無介入紀錄"
         : _lastIntervention.ToLocalTime().ToString("yyyy-MM-dd HH:mm:ss");
 
     public string CooldownDisplay
@@ -439,17 +439,17 @@ public partial class MainWindow : INotifyPropertyChanged
         get
         {
             if (_lastIntervention == DateTimeOffset.MinValue)
-                return $"已就绪（冷却时间设定 {_uiPrefs.CooldownMinutes} 分钟）";
+                return $"已就緒（冷卻時間設定 {_uiPrefs.CooldownMinutes} 分鐘）";
             var elapsed = DateTimeOffset.UtcNow - _lastIntervention;
             var cooldown = TimeSpan.FromMinutes(_uiPrefs.CooldownMinutes);
             if (elapsed >= cooldown)
-                return $"已就绪（距上次介入已逾 {_uiPrefs.CooldownMinutes} 分钟）";
+                return $"已就緒（距上次介入已逾 {_uiPrefs.CooldownMinutes} 分鐘）";
             var remaining = cooldown - elapsed;
-            return $"冷却保护中（剩余 {remaining.Minutes} 分 {remaining.Seconds:00} 秒）";
+            return $"冷卻保護中（剩餘 {remaining.Minutes} 分 {remaining.Seconds:00} 秒）";
         }
     }
 
-    public string PressureSampleDisplay => $"连续压力计数：{_pressureSamples} / {_uiPrefs.PressureTriggerCount} 次";
+    public string PressureSampleDisplay => $"連續壓力計數：{_pressureSamples} / {_uiPrefs.PressureTriggerCount} 次";
 
     public bool HasRescueReport
     {
@@ -527,8 +527,8 @@ public partial class MainWindow : INotifyPropertyChanged
     }
 
     public bool HasFilteredActivityItems => FilteredActivityItems.Count > 0;
-    public string ActivityCountSummary => $"共显示 {FilteredActivityItems.Count} 笔纪录（总计 {_allActivityItems.Count} 笔）";
-    public string PrivacyNoticeText => "“活动纪录只保存档案名称、路径、操作结果及效能指标，不读取或上传文件内容。”";
+    public string ActivityCountSummary => $"共顯示 {FilteredActivityItems.Count} 筆紀錄（總計 {_allActivityItems.Count} 筆）";
+    public string PrivacyNoticeText => "「活動紀錄只保存檔案名稱、路徑、操作結果及效能指標，不讀取或上傳文件內容。」";
 
     // =========================================================
     // Settings Page Properties
@@ -684,35 +684,36 @@ public partial class MainWindow : INotifyPropertyChanged
         SetOrganizerBusy(true);
         OrganizerInteractiveStateBadge = "正在搬移";
         OrganizerInteractiveStateTone = "Processing";
-        OrganizerInteractiveStateDetail = "正在将最近一批整理的文件安全复原回桌面原始位置…";
+        OrganizerInteractiveStateDetail = "正在將最近一批整理的文件安全復原回桌面原始位置…";
         try
         {
             var result = await _organizer.UndoLastAsync(CancellationToken.None);
             _hasOrganizerError = false;
             if (result.Moved == 0)
             {
-                OrganizerStatus = result.Messages.FirstOrDefault() ?? "没有可复原项目。";
-                OrganizerInteractiveStateBadge = "没有可复原纪录";
+                OrganizerStatus = NormalizeTraditionalChinese(result.Messages.FirstOrDefault() ?? "沒有可復原項目。");
+                OrganizerInteractiveStateBadge = "沒有可復原紀錄";
                 OrganizerInteractiveStateTone = "Neutral";
                 OrganizerInteractiveStateDetail = OrganizerStatus;
             }
             else
             {
-                OrganizerStatus = $"已复原 {result.Moved} 个文件。\n{string.Join("\n", result.Messages.Take(5))}";
+                var normalizedMessages = result.Messages.Take(5).Select(NormalizeTraditionalChinese);
+                OrganizerStatus = $"已復原 {result.Moved} 個文件。\n{string.Join("\n", normalizedMessages)}";
                 OrganizerInteractiveStateBadge = "整理完成";
                 OrganizerInteractiveStateTone = "Normal";
-                OrganizerInteractiveStateDetail = $"成功复原 {result.Moved} 个文件回到桌面。";
+                OrganizerInteractiveStateDetail = $"成功復原 {result.Moved} 個文件回到桌面。";
             }
             await LoadOrganizerHistoryAndLogsAsync();
         }
         catch (Exception ex)
         {
             _hasOrganizerError = true;
-            OrganizerStatus = $"复原失败：{ex.Message}";
-            OrganizerInteractiveStateBadge = "整理失败";
+            OrganizerStatus = $"復原失敗：{ex.Message}";
+            OrganizerInteractiveStateBadge = "整理失敗";
             OrganizerInteractiveStateTone = "Error";
             OrganizerInteractiveStateDetail = OrganizerStatus;
-            await _log.WriteAsync("错误", ex.ToString());
+            await _log.WriteAsync("錯誤", ex.ToString());
             await ReloadActivityLogOnlyAsync();
         }
         finally
@@ -727,24 +728,25 @@ public partial class MainWindow : INotifyPropertyChanged
         if (_isOrganizing) return;
         SetOrganizerBusy(true);
         _hasOrganizerError = false;
-        OrganizerStatus = "正在检查桌面文件…";
-        OrganizerInteractiveStateBadge = "正在扫描";
+        OrganizerStatus = "正在檢查桌面文件…";
+        OrganizerInteractiveStateBadge = "正在掃描";
         OrganizerInteractiveStateTone = "Processing";
-        OrganizerInteractiveStateDetail = "正在扫描桌面第一层文书档案，并检查写入与使用状态…";
+        OrganizerInteractiveStateDetail = "正在掃描桌面第一層文書檔案，並檢查寫入與使用狀態…";
         NotifyHomeStates();
 
         try
         {
             await Task.Delay(120);
             OrganizerInteractiveStateBadge = "正在搬移";
-            OrganizerInteractiveStateDetail = "正在依文件最后修改月份归档，并进行 SHA-256 重复档比对…";
+            OrganizerInteractiveStateDetail = "正在依文件最後修改月份歸檔，並進行 SHA-256 重複檔比對…";
 
             var result = await _organizer.OrganizeAsync(ignoreWaitingPeriod, CancellationToken.None);
             _lastScanTime = DateTimeOffset.Now;
             Notify(nameof(LastScanTimeDisplay));
 
-            OrganizerStatus = $"整理完成：移动 {result.Moved} 个，略过 {result.Skipped} 个。" +
-                              (result.Messages.Count > 0 ? $"\n{string.Join("\n", result.Messages.Take(6))}" : "");
+            var normalizedMessages = result.Messages.Take(6).Select(NormalizeTraditionalChinese).ToList();
+            OrganizerStatus = $"整理完成：移動 {result.Moved} 個，略過 {result.Skipped} 個。" +
+                              (normalizedMessages.Count > 0 ? $"\n{string.Join("\n", normalizedMessages)}" : "");
 
             await LoadOrganizerHistoryAndLogsAsync(result);
             UpdateOrganizerInteractiveStateFromResult(result);
@@ -752,11 +754,11 @@ public partial class MainWindow : INotifyPropertyChanged
         catch (Exception ex)
         {
             _hasOrganizerError = true;
-            OrganizerStatus = $"整理失败：{ex.Message}";
-            OrganizerInteractiveStateBadge = "整理失败";
+            OrganizerStatus = $"整理失敗：{ex.Message}";
+            OrganizerInteractiveStateBadge = "整理失敗";
             OrganizerInteractiveStateTone = "Error";
-            OrganizerInteractiveStateDetail = $"整理过程中发生错误：{ex.Message}";
-            await _log.WriteAsync("错误", ex.ToString());
+            OrganizerInteractiveStateDetail = $"整理過程中發生錯誤：{ex.Message}";
+            await _log.WriteAsync("錯誤", ex.ToString());
             await ReloadActivityLogOnlyAsync();
         }
         finally
@@ -771,44 +773,44 @@ public partial class MainWindow : INotifyPropertyChanged
         var hasInUseSkip = result.Messages.Any(m => m.Contains("使用中", StringComparison.OrdinalIgnoreCase));
         if (result.Moved == 0 && result.Skipped == 0)
         {
-            OrganizerInteractiveStateBadge = "没有可整理文件";
+            OrganizerInteractiveStateBadge = "沒有可整理文件";
             OrganizerInteractiveStateTone = "Neutral";
-            OrganizerInteractiveStateDetail = "目前桌面第一层没有符合条件的待整理文书档案。";
+            OrganizerInteractiveStateDetail = "目前桌面第一層沒有符合條件的待整理文書檔案。";
             return;
         }
 
         if (result.Moved == 0 && hasInUseSkip)
         {
-            OrganizerInteractiveStateBadge = "文件正在使用，因此略过";
+            OrganizerInteractiveStateBadge = "文件正在使用，因此略過";
             OrganizerInteractiveStateTone = "Warning";
-            OrganizerInteractiveStateDetail = $"侦测到 {result.Skipped} 个文件正在开启或编辑中，已安全略过不移动。";
+            OrganizerInteractiveStateDetail = $"偵測到 {result.Skipped} 個文件正在開啟或編輯中，已安全略過不移動。";
             return;
         }
 
         var topItem = RecentOrganizedItems.FirstOrDefault();
-        if (topItem is not null && topItem.StatusLabel.Contains("重复", StringComparison.OrdinalIgnoreCase))
+        if (topItem is not null && (topItem.StatusLabel.Contains("重複", StringComparison.OrdinalIgnoreCase) || topItem.StatusLabel.Contains("重复", StringComparison.OrdinalIgnoreCase)))
         {
-            OrganizerInteractiveStateBadge = "相同内容移入重复档";
+            OrganizerInteractiveStateBadge = "相同內容移入重複檔";
             OrganizerInteractiveStateTone = "Warning";
-            OrganizerInteractiveStateDetail = $"已整理 {result.Moved} 个文件；侦测到相同 SHA-256 内容，已安全移入「重複檔 Duplicates」。";
+            OrganizerInteractiveStateDetail = $"已整理 {result.Moved} 個文件；偵測到相同 SHA-256 內容，已安全移入「重複檔 Duplicates」。";
         }
         else if (topItem is not null && topItem.StatusLabel.Contains("重新命名", StringComparison.OrdinalIgnoreCase))
         {
             OrganizerInteractiveStateBadge = "同名文件已重新命名";
             OrganizerInteractiveStateTone = "Normal";
-            OrganizerInteractiveStateDetail = $"已整理 {result.Moved} 个文件；同名但内容不同的文件已自动加上序号保留。";
+            OrganizerInteractiveStateDetail = $"已整理 {result.Moved} 個文件；同名但內容不同的文件已自動加上序號保留。";
         }
         else if (hasInUseSkip)
         {
-            OrganizerInteractiveStateBadge = "文件正在使用，因此略过";
+            OrganizerInteractiveStateBadge = "文件正在使用，因此略過";
             OrganizerInteractiveStateTone = "Warning";
-            OrganizerInteractiveStateDetail = $"已移动 {result.Moved} 个文件，另有 {result.Skipped} 个使用中或等待期文件已安全略过。";
+            OrganizerInteractiveStateDetail = $"已移動 {result.Moved} 個文件，另有 {result.Skipped} 個使用中或等待期文件已安全略過。";
         }
         else
         {
             OrganizerInteractiveStateBadge = "整理完成";
             OrganizerInteractiveStateTone = "Normal";
-            OrganizerInteractiveStateDetail = $"成功归档 {result.Moved} 个文件（略过 {result.Skipped} 个），可随时一键复原。";
+            OrganizerInteractiveStateDetail = $"成功歸檔 {result.Moved} 個文件（略過 {result.Skipped} 個），可隨時一鍵復原。";
         }
     }
 
@@ -857,12 +859,12 @@ public partial class MainWindow : INotifyPropertyChanged
         try
         {
             var path = _documentation.Generate();
-            OrganizerStatus = $"已重新产生并开启说明书：{path}";
+            OrganizerStatus = $"已重新產生並開啟說明書：{path}";
             Process.Start(new ProcessStartInfo(path) { UseShellExecute = true });
         }
         catch (Exception ex)
         {
-            OrganizerStatus = $"说明书产生失败：{ex.Message}";
+            OrganizerStatus = $"說明書產生失敗：{ex.Message}";
         }
     }
 
@@ -877,8 +879,8 @@ public partial class MainWindow : INotifyPropertyChanged
         NotifyHomeStates();
 
         StatusText = automatic
-            ? "侦测到持续资源压力，正在执行安全优先权调度…"
-            : "正在诊断 CPU / RAM / SSD 资源瓶颈并执行安全调度…";
+            ? "偵測到持續資源壓力，正在執行安全優先權調度…"
+            : "正在診斷 CPU / RAM / SSD 資源瓶頸並執行安全調度…";
 
         try
         {
@@ -896,7 +898,7 @@ public partial class MainWindow : INotifyPropertyChanged
         {
             _hasPerformanceError = true;
             StatusText = $"急救未完成：{ex.Message}";
-            await _log.WriteAsync("错误", ex.ToString());
+            await _log.WriteAsync("錯誤", ex.ToString());
             await ReloadActivityLogOnlyAsync();
         }
         finally
@@ -914,15 +916,15 @@ public partial class MainWindow : INotifyPropertyChanged
         var ramDelta = report.After.MemoryPercent - report.Before.MemoryPercent;
         var ssdDelta = report.After.DiskBusyPercent - report.Before.DiskBusyPercent;
 
-        RescueCpuComparison = $"{report.Before.CpuPercent:0}% → {report.After.CpuPercent:0}%（{(cpuDelta <= 0 ? $"变化 {cpuDelta:0}%" : $"+{cpuDelta:0}%")}）";
+        RescueCpuComparison = $"{report.Before.CpuPercent:0}% → {report.After.CpuPercent:0}%（{(cpuDelta <= 0 ? $"變化 {cpuDelta:0}%" : $"+{cpuDelta:0}%")}）";
         RescueRamComparison = $"{report.Before.MemoryPercent:0}%（可用 {report.Before.AvailableMemoryMb:N0} MB） → {report.After.MemoryPercent:0}%（可用 {report.After.AvailableMemoryMb:N0} MB）";
-        RescueSsdComparison = $"{report.Before.DiskBusyPercent:0}% → {report.After.DiskBusyPercent:0}%（{(ssdDelta <= 0 ? $"变化 {ssdDelta:0}%" : $"+{ssdDelta:0}%")}）";
+        RescueSsdComparison = $"{report.Before.DiskBusyPercent:0}% → {report.After.DiskBusyPercent:0}%（{(ssdDelta <= 0 ? $"變化 {ssdDelta:0}%" : $"+{ssdDelta:0}%")}）";
 
         RescueActionItems.Clear();
         if (report.Actions.Count == 0)
         {
-            RescueActionItems.Add("未变更任何程序设定（目前无符合安全降级门槛的高耗能背景程式）");
-            RescueActionsSummary = "未变更设定：所有背景程式皆在安全范围内，或负载来自受保护的系统与前景程式。";
+            RescueActionItems.Add("未變更任何程式設定（目前無符合安全降級門檻的高耗能背景程式）");
+            RescueActionsSummary = "未變更設定：所有背景程式皆在安全範圍內，或負載來自受保護的系統與前景程式。";
         }
         else
         {
@@ -937,17 +939,17 @@ public partial class MainWindow : INotifyPropertyChanged
 
         if (improved)
         {
-            RescueImprovementBadge = "已观察到改善";
+            RescueImprovementBadge = "已觀察到改善";
             RescueImprovementTone = "Normal";
-            RescueNoImprovementReason = "资源竞争已缓解；所有优先权调整皆为暂时性，可随时点击「还原暂时设定」恢复默认值。";
+            RescueNoImprovementReason = "資源競爭已緩解；所有優先權調整皆為暫時性，可隨時點擊「還原暫時設定」恢復預設值。";
         }
         else
         {
-            RescueImprovementBadge = report.Actions.Count == 0 ? "无需介入（保持原状）" : "短时间内尚未观察到明显下降";
+            RescueImprovementBadge = report.Actions.Count == 0 ? "無需介入（保持原狀）" : "短時間內尚未觀察到明顯下降";
             RescueImprovementTone = "Warning";
             RescueNoImprovementReason = report.Actions.Count == 0
-                ? "原因说明：未发现 CPU 累积逾 20 秒且记忆体逾 350 MB 的非前景背景程式，系统设定保持不变。"
-                : "原因说明：目前资源使用主要来自您正在操作的前景应用程式或系统核心 I/O；为保障资料安全，本工具不强制关闭应用程式或清空系统快取。";
+                ? "原因說明：未發現 CPU 累積逾 20 秒且記憶體逾 350 MB 的非前景背景程式，系統設定保持不變。"
+                : "原因說明：目前資源使用主要來自您正在操作的前景應用程式或系統核心 I/O；為保障資料安全，本工具不強制關閉應用程式或清空系統快取。";
         }
     }
 
@@ -956,13 +958,13 @@ public partial class MainWindow : INotifyPropertyChanged
         var restored = _safety.RestoreAll();
         if (restored.Count == 0)
         {
-            StatusText = "目前已是原始排程优先权设定，无需还原。";
+            StatusText = "目前已是原始排程優先權設定，無需還原。";
         }
         else
         {
-            var msg = $"已还原 {restored.Count} 个程式的排程优先权：{string.Join("、", restored)}";
+            var msg = $"已還原 {restored.Count} 個程式的排程優先權：{string.Join("、", restored)}";
             StatusText = msg;
-            await _log.WriteAsync("效能优化", msg);
+            await _log.WriteAsync("效能優化", msg);
             await ReloadActivityLogOnlyAsync();
         }
     }
@@ -978,7 +980,7 @@ public partial class MainWindow : INotifyPropertyChanged
         if (_monitorCancellation is not null) return;
         _monitorCancellation = new CancellationTokenSource();
         NotifyMonitoring();
-        StatusText = $"背景智慧监控已启动；每 {_uiPrefs.MonitorIntervalSeconds} 秒低频取样，连续 {_uiPrefs.PressureTriggerCount} 次压力达标且逾 {_uiPrefs.CooldownMinutes} 分钟冷却期才介入。";
+        StatusText = $"背景智慧監控已啟動；每 {_uiPrefs.MonitorIntervalSeconds} 秒低頻取樣，連續 {_uiPrefs.PressureTriggerCount} 次壓力達標且逾 {_uiPrefs.CooldownMinutes} 分鐘冷卻期才介入。";
         _ = MonitorLoopAsync(_monitorCancellation.Token);
     }
 
@@ -994,12 +996,12 @@ public partial class MainWindow : INotifyPropertyChanged
         {
             var restored = _safety.RestoreAll();
             StatusText = restored.Count == 0
-                ? "背景监控已停止。"
-                : $"背景监控已停止，并自动还原 {restored.Count} 个暂时优先权设定。";
+                ? "背景監控已停止。"
+                : $"背景監控已停止，並自動還原 {restored.Count} 個暫時優先權設定。";
         }
         else
         {
-            StatusText = "背景监控已停止（保留目前优先权设定）。";
+            StatusText = "背景監控已停止（保留目前優先權設定）。";
         }
         NotifyMonitoring();
     }
@@ -1032,10 +1034,10 @@ public partial class MainWindow : INotifyPropertyChanged
         catch (Exception ex)
         {
             _hasPerformanceError = true;
-            await _log.WriteAsync("监控错误", ex.ToString());
+            await _log.WriteAsync("監控錯誤", ex.ToString());
             await Dispatcher.InvokeAsync(() =>
             {
-                StatusText = $"背景监控已暂停：{ex.Message}";
+                StatusText = $"背景監控已暫停：{ex.Message}";
                 NotifyHomeStates();
             });
         }
@@ -1065,7 +1067,7 @@ public partial class MainWindow : INotifyPropertyChanged
 
     private static string FormatReport(RescueReport report)
     {
-        var actions = report.Actions.Count == 0 ? "未变更设定" : string.Join("；", report.Actions);
+        var actions = report.Actions.Count == 0 ? "未變更設定" : string.Join("；", report.Actions);
         return $"{report.Summary}\n{actions}\nCPU {report.Before.CpuPercent:0}% → {report.After.CpuPercent:0}%　RAM {report.Before.MemoryPercent:0}% → {report.After.MemoryPercent:0}%　SSD {report.Before.DiskBusyPercent:0}% → {report.After.DiskBusyPercent:0}%";
     }
 
@@ -1158,9 +1160,9 @@ public partial class MainWindow : INotifyPropertyChanged
                             FileTypeIconGlyph = glyph,
                             FileName = fileName,
                             OriginalLocation = DesktopPath,
-                            TargetMonth = "—（保留于桌面）",
+                            TargetMonth = "—（保留於桌面）",
                             OrganizedTime = DateTimeOffset.Now.ToString("yyyy-MM-dd HH:mm"),
-                            StatusLabel = "文件使用中，已略过",
+                            StatusLabel = "文件使用中，已略過",
                             StatusTone = "Warning"
                         });
                     }
@@ -1182,7 +1184,7 @@ public partial class MainWindow : INotifyPropertyChanged
                     var isRenamed = !string.Equals(fromName, toName, StringComparison.OrdinalIgnoreCase);
 
                     var statusLabel = isDuplicate
-                        ? "相同内容移入重复档"
+                        ? "相同內容移入重複檔"
                         : isRenamed
                             ? $"同名已重新命名 ({toName})"
                             : "成功";
@@ -1209,15 +1211,15 @@ public partial class MainWindow : INotifyPropertyChanged
             {
                 if (_undoableBatchCount > 0)
                 {
-                    OrganizerInteractiveStateBadge = "可以复原";
+                    OrganizerInteractiveStateBadge = "可以復原";
                     OrganizerInteractiveStateTone = "Normal";
-                    OrganizerInteractiveStateDetail = $"目前已保存 {_undoableBatchCount} 批整理纪录，最近一批含 {_undoableFileCount} 个文件可一键复原。";
+                    OrganizerInteractiveStateDetail = $"目前已保存 {_undoableBatchCount} 批整理紀錄，最近一批含 {_undoableFileCount} 個文件可一鍵復原。";
                 }
                 else
                 {
-                    OrganizerInteractiveStateBadge = "没有可复原纪录";
+                    OrganizerInteractiveStateBadge = "沒有可復原紀錄";
                     OrganizerInteractiveStateTone = "Neutral";
-                    OrganizerInteractiveStateDetail = "尚无历史整理批次；执行整理后将自动保存最近 100 批复原纪录。";
+                    OrganizerInteractiveStateDetail = "尚無歷史整理批次；執行整理後將自動保存最近 100 批復原紀錄。";
                 }
             }
 
@@ -1272,17 +1274,17 @@ public partial class MainWindow : INotifyPropertyChanged
     {
         var filterGroup = "文件整理";
         var tone = "Normal";
-        var action = rawCategory;
-        var target = "系统";
-        var result = message;
+        var action = NormalizeTraditionalChinese(rawCategory);
+        var target = "系統";
+        var result = NormalizeTraditionalChinese(message);
 
         if (rawCategory.Contains("错误") || rawCategory.Contains("錯誤"))
         {
-            filterGroup = "错误";
+            filterGroup = "錯誤";
             tone = "Error";
-            action = rawCategory;
-            target = "应用程式运作";
-            result = message.Split('\n').FirstOrDefault() ?? message;
+            action = NormalizeTraditionalChinese(rawCategory);
+            target = "應用程式運作";
+            result = NormalizeTraditionalChinese(message.Split('\n').FirstOrDefault() ?? message);
         }
         else if (rawCategory.Contains("警告"))
         {
@@ -1291,14 +1293,14 @@ public partial class MainWindow : INotifyPropertyChanged
         }
         else if (rawCategory is "介入" or "結果" or "结果" or "效能优化" or "效能優化")
         {
-            filterGroup = "效能优化";
+            filterGroup = "效能優化";
             if (message.Contains("未找到") || message.Contains("尚未觀察"))
             {
                 tone = "Warning";
             }
-            action = rawCategory == "介入" ? "安全优先权调度" : rawCategory == "結果" || rawCategory == "结果" ? "效能急救评估" : rawCategory;
-            target = "背景与前景行程";
-            result = message;
+            action = rawCategory == "介入" ? "安全優先權調度" : rawCategory == "結果" || rawCategory == "结果" ? "效能急救評估" : NormalizeTraditionalChinese(rawCategory);
+            target = "背景與前景行程";
+            result = NormalizeTraditionalChinese(message);
         }
         else if (rawCategory.Contains("整理") || rawCategory.Contains("復原") || rawCategory.Contains("复原"))
         {
@@ -1310,9 +1312,9 @@ public partial class MainWindow : INotifyPropertyChanged
                 var destFolder = Path.GetFileName(Path.GetDirectoryName(parts[1]) ?? string.Empty);
                 var isDup = destFolder.Contains("Duplicates", StringComparison.OrdinalIgnoreCase) ||
                             destFolder.Contains("重複檔", StringComparison.OrdinalIgnoreCase);
-                action = rawCategory.Contains("復原") || rawCategory.Contains("复原") ? "复原上次整理" : "自动/手动月份归档";
+                action = rawCategory.Contains("復原") || rawCategory.Contains("复原") ? "復原上次整理" : "自動／手動月份歸檔";
                 target = fileName;
-                result = isDup ? $"移入重复档资料夹（{destFolder}）" : $"归档至 {destFolder}\\{Path.GetFileName(parts[1])}";
+                result = isDup ? $"移入重複檔資料夾（{destFolder}）" : $"歸檔至 {destFolder}\\{Path.GetFileName(parts[1])}";
                 if (isDup) tone = "Warning";
             }
         }
@@ -1328,6 +1330,21 @@ public partial class MainWindow : INotifyPropertyChanged
             ResultDisplay = result,
             StatusTone = tone
         };
+    }
+
+    private static string NormalizeTraditionalChinese(string text)
+    {
+        if (string.IsNullOrEmpty(text)) return text;
+        return text
+            .Replace("使用中，已略过：", "使用中，已略過：")
+            .Replace("没有可复原的整理纪录。", "沒有可復原的整理紀錄。")
+            .Replace("已有整理作业正在执行。", "已有整理作業正在執行。")
+            .Replace("已复原：", "已復原：")
+            .Replace("复原整理", "復原整理")
+            .Replace("效能优化", "效能優化")
+            .Replace("监控错误", "監控錯誤")
+            .Replace("错误", "錯誤")
+            .Replace("结果", "結果");
     }
 
     private void ApplyActivityLogFilter()
@@ -1428,7 +1445,7 @@ public partial class MainWindow : INotifyPropertyChanged
     private Forms.NotifyIcon CreateTrayIcon()
     {
         var menu = new Forms.ContextMenuStrip();
-        menu.Items.Add("开启智慧桌面管家", null, (_, _) => ShowFromTray());
+        menu.Items.Add("開啟智慧桌面管家", null, (_, _) => ShowFromTray());
         menu.Items.Add("立即整理桌面文件", null, async (_, _) => await Dispatcher.InvokeAsync(async () => await RunOrganizerAsync(true)));
         menu.Items.Add("立即效能急救", null, async (_, _) => await Dispatcher.InvokeAsync(async () => await RunRescueAsync(false)));
         menu.Items.Add(new Forms.ToolStripSeparator());
@@ -1459,7 +1476,7 @@ public partial class MainWindow : INotifyPropertyChanged
     private void MinimizeToTrayButton_Click(object sender, RoutedEventArgs e)
     {
         Hide();
-        _trayIcon.ShowBalloonTip(1500, "Smart Desktop Guardian", "程式已最小化至系统匣继续守护。", Forms.ToolTipIcon.Info);
+        _trayIcon.ShowBalloonTip(1500, "Smart Desktop Guardian", "程式已最小化至系統匣繼續守護。", Forms.ToolTipIcon.Info);
     }
 
     private void ExitAppButton_Click(object sender, RoutedEventArgs e) => ExitApplication();
@@ -1477,7 +1494,7 @@ public partial class MainWindow : INotifyPropertyChanged
         }
         e.Cancel = true;
         Hide();
-        _trayIcon.ShowBalloonTip(1500, "Smart Desktop Guardian", "程式仍在系统匣执行。", Forms.ToolTipIcon.Info);
+        _trayIcon.ShowBalloonTip(1500, "Smart Desktop Guardian", "程式仍在系統匣執行。", Forms.ToolTipIcon.Info);
     }
 
     private void ShowFromTray()

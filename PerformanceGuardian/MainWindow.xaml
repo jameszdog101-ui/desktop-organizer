@@ -89,7 +89,7 @@
                                FontWeight="SemiBold"
                                Foreground="{Binding OverallSystemStateTone, Converter={StaticResource ToneToFg}}" />
                   </Border>
-                  <TextBlock Text="守护状态"
+                  <TextBlock Text="守護狀態"
                              FontSize="11.5"
                              Foreground="{DynamicResource TextSecondaryBrush}"
                              VerticalAlignment="Center" />
@@ -109,13 +109,13 @@
                 <ColumnDefinition Width="*" />
               </Grid.ColumnDefinitions>
               <ui:Button Grid.Column="0"
-                         Content="收至系统匣"
+                         Content="收至系統匣"
                          Appearance="Secondary"
                          HorizontalAlignment="Stretch"
                          Padding="4,0"
                          Height="32"
                          FontSize="11.5"
-                         ToolTip="最小化至系统匣继续背景守护"
+                         ToolTip="最小化至系統匣繼續背景守護"
                          Click="MinimizeToTrayButton_Click" />
               <ui:Button Grid.Column="2"
                          Content="完全退出"
@@ -124,24 +124,24 @@
                          Padding="4,0"
                          Height="32"
                          FontSize="11.5"
-                         ToolTip="还原暂时设定并完全退出程式"
+                         ToolTip="還原暫時設定並完全退出程式"
                          Click="ExitAppButton_Click" />
             </Grid>
           </StackPanel>
 
           <!-- Navigation Links -->
           <StackPanel>
-            <TextBlock Text="功能导航"
+            <TextBlock Text="功能導航"
                        FontSize="11"
                        FontWeight="SemiBold"
                        Foreground="{DynamicResource TextSecondaryBrush}"
                        Margin="8,0,0,4" />
 
             <RadioButton Style="{StaticResource NavRadioButtonStyle}"
-                         Content="首页"
+                         Content="首頁"
                          Tag="{StaticResource GeoHome}"
                          GroupName="MainNav"
-                         AutomationProperties.Name="首页"
+                         AutomationProperties.Name="首頁"
                          IsChecked="{Binding SelectedPage, Converter={StaticResource StringEqToBool}, ConverterParameter=Home, Mode=TwoWay}" />
 
             <RadioButton Style="{StaticResource NavRadioButtonStyle}"
@@ -152,39 +152,39 @@
                          IsChecked="{Binding SelectedPage, Converter={StaticResource StringEqToBool}, ConverterParameter=Organizer, Mode=TwoWay}" />
 
             <RadioButton Style="{StaticResource NavRadioButtonStyle}"
-                         Content="效能优化"
+                         Content="效能優化"
                          Tag="{StaticResource GeoPulse}"
                          GroupName="MainNav"
-                         AutomationProperties.Name="效能优化"
+                         AutomationProperties.Name="效能優化"
                          IsChecked="{Binding SelectedPage, Converter={StaticResource StringEqToBool}, ConverterParameter=Performance, Mode=TwoWay}" />
 
             <RadioButton Style="{StaticResource NavRadioButtonStyle}"
-                         Content="活动纪录"
+                         Content="活動紀錄"
                          Tag="{StaticResource GeoHistory}"
                          GroupName="MainNav"
-                         AutomationProperties.Name="活动纪录"
+                         AutomationProperties.Name="活動紀錄"
                          IsChecked="{Binding SelectedPage, Converter={StaticResource StringEqToBool}, ConverterParameter=Activity, Mode=TwoWay}" />
 
             <Separator Background="{DynamicResource DividerBrush}" Margin="6,8" />
 
-            <TextBlock Text="系统与帮助"
+            <TextBlock Text="系統與說明"
                        FontSize="11"
                        FontWeight="SemiBold"
                        Foreground="{DynamicResource TextSecondaryBrush}"
                        Margin="8,0,0,4" />
 
             <RadioButton Style="{StaticResource NavRadioButtonStyle}"
-                         Content="设定"
+                         Content="設定"
                          Tag="{StaticResource GeoSettings}"
                          GroupName="MainNav"
-                         AutomationProperties.Name="设定"
+                         AutomationProperties.Name="設定"
                          IsChecked="{Binding SelectedPage, Converter={StaticResource StringEqToBool}, ConverterParameter=Settings, Mode=TwoWay}" />
 
             <RadioButton Style="{StaticResource NavRadioButtonStyle}"
-                         Content="使用说明"
+                         Content="使用說明"
                          Tag="{StaticResource GeoGuide}"
                          GroupName="MainNav"
-                         AutomationProperties.Name="使用说明"
+                         AutomationProperties.Name="使用說明"
                          IsChecked="{Binding SelectedPage, Converter={StaticResource StringEqToBool}, ConverterParameter=Guide, Mode=TwoWay}" />
           </StackPanel>
         </DockPanel>
@@ -196,7 +196,7 @@
       <Grid Grid.Column="1">
 
         <!-- ======================================================= -->
-        <!-- PAGE 1: 首页 (Home)                                     -->
+        <!-- PAGE 1: 首頁 (Home)                                     -->
         <!-- ======================================================= -->
         <ScrollViewer VerticalScrollBarVisibility="Auto"
                       HorizontalScrollBarVisibility="Disabled"
@@ -206,12 +206,12 @@
 
             <!-- Page Header -->
             <StackPanel Margin="0,0,0,14">
-              <TextBlock Text="电脑与桌面，一处管理"
+              <TextBlock Text="電腦與桌面，一處管理"
                          FontSize="24"
                          FontWeight="Bold"
                          Foreground="{DynamicResource TextPrimaryBrush}"
                          TextWrapping="Wrap" />
-              <TextBlock Text="桌面文书依月份自动归档，并在 8GB RAM／256GB SSD 资源紧张时执行安全、可还原的优先权调度。"
+              <TextBlock Text="桌面文書依月份自動歸檔，並在 8GB RAM／256GB SSD 資源緊張時執行安全、可還原的優先權調度。"
                          FontSize="13"
                          Foreground="{DynamicResource TextSecondaryBrush}"
                          TextWrapping="Wrap"
@@ -247,46 +247,46 @@
 
                 <!-- 6 Required System States Visual Selector / Indicator -->
                 <WrapPanel Margin="0,8,0,0" VerticalAlignment="Center">
-                  <TextBlock Text="状态检视："
+                  <TextBlock Text="狀態檢視："
                              FontSize="11.5"
                              Foreground="{DynamicResource TextSecondaryBrush}"
                              VerticalAlignment="Center"
                              Margin="0,0,6,4" />
                   <RadioButton Style="{StaticResource FilterPillRadioButtonStyle}"
-                               Content="即时侦测"
+                               Content="即時偵測"
                                Padding="9,3" Margin="0,0,6,4" FontSize="11"
                                GroupName="HomeStatePreview"
                                IsChecked="{Binding SelectedHomeStatePreview, Converter={StaticResource StringEqToBool}, ConverterParameter=Auto, Mode=TwoWay}" />
                   <RadioButton Style="{StaticResource FilterPillRadioButtonStyle}"
-                               Content="正常状态"
+                               Content="正常狀態"
                                Padding="9,3" Margin="0,0,6,4" FontSize="11"
                                GroupName="HomeStatePreview"
-                               IsChecked="{Binding SelectedHomeStatePreview, Converter={StaticResource StringEqToBool}, ConverterParameter=正常状态, Mode=TwoWay}" />
+                               IsChecked="{Binding SelectedHomeStatePreview, Converter={StaticResource StringEqToBool}, ConverterParameter=正常狀態, Mode=TwoWay}" />
                   <RadioButton Style="{StaticResource FilterPillRadioButtonStyle}"
-                               Content="注意状态"
+                               Content="注意狀態"
                                Padding="9,3" Margin="0,0,6,4" FontSize="11"
                                GroupName="HomeStatePreview"
-                               IsChecked="{Binding SelectedHomeStatePreview, Converter={StaticResource StringEqToBool}, ConverterParameter=注意状态, Mode=TwoWay}" />
+                               IsChecked="{Binding SelectedHomeStatePreview, Converter={StaticResource StringEqToBool}, ConverterParameter=注意狀態, Mode=TwoWay}" />
                   <RadioButton Style="{StaticResource FilterPillRadioButtonStyle}"
-                               Content="高负载状态"
+                               Content="高負載狀態"
                                Padding="9,3" Margin="0,0,6,4" FontSize="11"
                                GroupName="HomeStatePreview"
-                               IsChecked="{Binding SelectedHomeStatePreview, Converter={StaticResource StringEqToBool}, ConverterParameter=高负载状态, Mode=TwoWay}" />
+                               IsChecked="{Binding SelectedHomeStatePreview, Converter={StaticResource StringEqToBool}, ConverterParameter=高負載狀態, Mode=TwoWay}" />
                   <RadioButton Style="{StaticResource FilterPillRadioButtonStyle}"
-                               Content="正在处理状态"
+                               Content="正在處理狀態"
                                Padding="9,3" Margin="0,0,6,4" FontSize="11"
                                GroupName="HomeStatePreview"
-                               IsChecked="{Binding SelectedHomeStatePreview, Converter={StaticResource StringEqToBool}, ConverterParameter=正在处理状态, Mode=TwoWay}" />
+                               IsChecked="{Binding SelectedHomeStatePreview, Converter={StaticResource StringEqToBool}, ConverterParameter=正在處理狀態, Mode=TwoWay}" />
                   <RadioButton Style="{StaticResource FilterPillRadioButtonStyle}"
-                               Content="错误状态"
+                               Content="錯誤狀態"
                                Padding="9,3" Margin="0,0,6,4" FontSize="11"
                                GroupName="HomeStatePreview"
-                               IsChecked="{Binding SelectedHomeStatePreview, Converter={StaticResource StringEqToBool}, ConverterParameter=错误状态, Mode=TwoWay}" />
+                               IsChecked="{Binding SelectedHomeStatePreview, Converter={StaticResource StringEqToBool}, ConverterParameter=錯誤狀態, Mode=TwoWay}" />
                   <RadioButton Style="{StaticResource FilterPillRadioButtonStyle}"
-                               Content="尚无资料状态"
+                               Content="尚無資料狀態"
                                Padding="9,3" Margin="0,0,6,4" FontSize="11"
                                GroupName="HomeStatePreview"
-                               IsChecked="{Binding SelectedHomeStatePreview, Converter={StaticResource StringEqToBool}, ConverterParameter=尚无资料状态, Mode=TwoWay}" />
+                               IsChecked="{Binding SelectedHomeStatePreview, Converter={StaticResource StringEqToBool}, ConverterParameter=尚無資料狀態, Mode=TwoWay}" />
                 </WrapPanel>
               </StackPanel>
             </Border>
@@ -321,7 +321,7 @@
                                  Foreground="{DynamicResource TextPrimaryBrush}"
                                  TextWrapping="Wrap" />
                     </DockPanel>
-                    <TextBlock Text="只整理桌面第一层常见办公文书，依最后修改月份归档"
+                    <TextBlock Text="只整理桌面第一層常見辦公文書，依最後修改月份歸檔"
                                FontSize="12"
                                Foreground="{DynamicResource TextSecondaryBrush}"
                                TextWrapping="Wrap"
@@ -344,7 +344,7 @@
                                Click="OrganizeNowButton_Click"
                                IsEnabled="{Binding CanOrganize}" />
                     <ui:Button Grid.Column="2"
-                               Content="开启整理资料夹"
+                               Content="開啟整理資料夾"
                                Appearance="Secondary"
                                HorizontalAlignment="Stretch"
                                Padding="6,0"
@@ -362,7 +362,7 @@
                           <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0" VerticalAlignment="Center" Margin="0,0,8,0">
-                          <TextBlock Text="自动整理开关"
+                          <TextBlock Text="自動整理開關"
                                      FontWeight="SemiBold"
                                      FontSize="13"
                                      Foreground="{DynamicResource TextPrimaryBrush}" />
@@ -376,7 +376,7 @@
                                   Style="{StaticResource FluentToggleSwitchStyle}"
                                   Content=""
                                   VerticalAlignment="Center"
-                                  AutomationProperties.Name="自动整理开关"
+                                  AutomationProperties.Name="自動整理開關"
                                   IsChecked="{Binding AutoOrganizeEnabled}" />
                       </Grid>
                     </Border>
@@ -398,16 +398,16 @@
                           <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock Grid.Row="0" Grid.Column="0" Text="最近一次扫描时间" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="12.5" Margin="0,0,8,0" />
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="最近一次掃描時間" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="12.5" Margin="0,0,8,0" />
                         <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding LastScanTimeDisplay}" FontWeight="SemiBold" FontSize="12.5" HorizontalAlignment="Right" TextWrapping="Wrap" TextAlignment="Right" />
 
-                        <TextBlock Grid.Row="2" Grid.Column="0" Text="今天整理的文件数量" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="12.5" Margin="0,0,8,0" />
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="今天整理的文件數量" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="12.5" Margin="0,0,8,0" />
                         <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding TodayOrganizedCountDisplay}" FontWeight="SemiBold" FontSize="12.5" Foreground="{StaticResource BrandDarkBrush}" HorizontalAlignment="Right" />
 
-                        <TextBlock Grid.Row="4" Grid.Column="0" Text="整理资料夹" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="12.5" Margin="0,0,8,0" />
+                        <TextBlock Grid.Row="4" Grid.Column="0" Text="整理資料夾" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="12.5" Margin="0,0,8,0" />
                         <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding OrganizedFolderNameDisplay}" FontWeight="SemiBold" FontSize="12.5" HorizontalAlignment="Right" TextTrimming="CharacterEllipsis" ToolTip="{Binding OrganizedPath}" />
 
-                        <TextBlock Grid.Row="6" Grid.Column="0" Text="目前卡片状态" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="12.5" Margin="0,0,8,0" VerticalAlignment="Center" />
+                        <TextBlock Grid.Row="6" Grid.Column="0" Text="目前卡片狀態" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="12.5" Margin="0,0,8,0" VerticalAlignment="Center" />
                         <Border Grid.Row="6" Grid.Column="1" HorizontalAlignment="Right" CornerRadius="6" Padding="7,2"
                                 Background="{Binding HomeOrganizerCardStateTone, Converter={StaticResource ToneToBg}}">
                           <TextBlock Text="{Binding HomeOrganizerCardStateBadge}" FontSize="11" FontWeight="SemiBold"
@@ -419,7 +419,7 @@
                 </DockPanel>
               </Border>
 
-              <!-- CARD 2: 效能优化卡片 -->
+              <!-- CARD 2: 效能優化卡片 -->
               <Border Grid.Column="2" Style="{StaticResource CardStyle}" Padding="16">
                 <DockPanel LastChildFill="True">
                   <!-- Card Header -->
@@ -435,13 +435,13 @@
                                    FontWeight="SemiBold"
                                    Foreground="{Binding OverallSystemStateTone, Converter={StaticResource ToneToFg}}" />
                       </Border>
-                      <TextBlock Text="电脑效能优化"
+                      <TextBlock Text="電腦效能優化"
                                  FontSize="18"
                                  FontWeight="SemiBold"
                                  Foreground="{DynamicResource TextPrimaryBrush}"
                                  TextWrapping="Wrap" />
                     </DockPanel>
-                    <TextBlock Text="即时监控核心指标，以可还原的暂时优先权调度缓解卡顿"
+                    <TextBlock Text="即時監控核心指標，以可還原的暫時優先權調度緩解卡頓"
                                FontSize="12"
                                Foreground="{DynamicResource TextSecondaryBrush}"
                                TextWrapping="Wrap"
@@ -488,14 +488,14 @@
                           <TextBlock Text="{Binding AvailableMemoryDisplay}" FontSize="11.5" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="0,0,6,0" />
                           <TextBlock Text="{Binding MemoryDisplay}" FontSize="13.5" FontWeight="Bold" />
                         </StackPanel>
-                        <TextBlock Text="RAM 记忆体" FontSize="12.5" Foreground="{DynamicResource TextSecondaryBrush}" />
+                        <TextBlock Text="RAM 記憶體" FontSize="12.5" Foreground="{DynamicResource TextSecondaryBrush}" />
                       </DockPanel>
                       <ProgressBar Style="{StaticResource MetricBarStyle}" Value="{Binding MemoryPercent, Mode=OneWay}" Margin="0,0,0,8" />
 
                       <!-- SSD I/O Pressure -->
                       <DockPanel Margin="0,0,0,4">
                         <TextBlock DockPanel.Dock="Right" Text="{Binding DiskDisplay}" FontSize="13.5" FontWeight="Bold" />
-                        <TextBlock Text="SSD I/O 压力" FontSize="12.5" Foreground="{DynamicResource TextSecondaryBrush}" />
+                        <TextBlock Text="SSD I/O 壓力" FontSize="12.5" Foreground="{DynamicResource TextSecondaryBrush}" />
                       </DockPanel>
                       <ProgressBar Style="{StaticResource MetricBarStyle}" Value="{Binding DiskPercent, Mode=OneWay}" Margin="0,0,0,8" />
 
@@ -511,10 +511,10 @@
                           <ColumnDefinition Width="Auto" />
                           <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Row="0" Grid.Column="0" Text="SSD 可用空间" FontSize="12" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,8,0" />
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="SSD 可用空間" FontSize="12" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,8,0" />
                         <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding DiskProfile}" FontSize="12" FontWeight="SemiBold" HorizontalAlignment="Right" TextWrapping="Wrap" TextAlignment="Right" />
 
-                        <TextBlock Grid.Row="2" Grid.Column="0" Text="整体状态" FontSize="12" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,8,0" VerticalAlignment="Top" />
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="整體狀態" FontSize="12" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,8,0" VerticalAlignment="Top" />
                         <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding StatusText}" FontSize="12" FontWeight="Medium" HorizontalAlignment="Right" TextWrapping="Wrap" TextAlignment="Right" />
                       </Grid>
                     </StackPanel>
@@ -545,7 +545,7 @@
                       Padding="12,7"
                       Margin="12,0,0,0">
                 <CheckBox Style="{StaticResource FluentToggleSwitchStyle}"
-                          Content="自动整理"
+                          Content="自動整理"
                           FontWeight="SemiBold"
                           IsChecked="{Binding AutoOrganizeEnabled}" />
               </Border>
@@ -555,7 +555,7 @@
                            FontWeight="Bold"
                            Foreground="{DynamicResource TextPrimaryBrush}"
                            TextWrapping="Wrap" />
-                <TextBlock Text="自动扫描桌面第一层常见办公文书，依最后修改时间归档至月份资料夹。"
+                <TextBlock Text="自動掃描桌面第一層常見辦公文書，依最後修改時間歸檔至月份資料夾。"
                            FontSize="13"
                            Foreground="{DynamicResource TextSecondaryBrush}"
                            TextWrapping="Wrap"
@@ -617,37 +617,37 @@
                   <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                  <ColumnDefinition Width="135" />
+                  <ColumnDefinition Width="140" />
                   <ColumnDefinition Width="*" />
                   <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
                 <!-- Current Desktop Path -->
-                <TextBlock Grid.Row="0" Grid.Column="0" Text="当前桌面路径" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" />
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="當前桌面路徑" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" />
                 <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding DesktopPath}" FontWeight="Medium" VerticalAlignment="Center" TextWrapping="Wrap" />
-                <ui:Button Grid.Row="0" Grid.Column="2" Content="开启桌面" Appearance="Secondary" Height="30" FontSize="12" Margin="8,0,0,0" Click="OpenDesktopFolder_Click" />
+                <ui:Button Grid.Row="0" Grid.Column="2" Content="開啟桌面" Appearance="Secondary" Height="30" FontSize="12" Margin="8,0,0,0" Click="OpenDesktopFolder_Click" />
 
                 <!-- Current Organized Folder Path -->
-                <TextBlock Grid.Row="2" Grid.Column="0" Text="当前整理资料夹路径" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" />
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="當前整理資料夾路徑" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" />
                 <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding OrganizedPath}" FontWeight="SemiBold" Foreground="{StaticResource BrandDarkBrush}" VerticalAlignment="Center" TextWrapping="Wrap" />
-                <ui:Button Grid.Row="2" Grid.Column="2" Content="开启整理资料夹" Appearance="Secondary" Height="30" FontSize="12" Margin="8,0,0,0" Click="OpenOrganizedFolder_Click" />
+                <ui:Button Grid.Row="2" Grid.Column="2" Content="開啟整理資料夾" Appearance="Secondary" Height="30" FontSize="12" Margin="8,0,0,0" Click="OpenOrganizedFolder_Click" />
 
                 <!-- Check Interval & New File Waiting Time -->
                 <Border Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource SoftCardStyle}" Padding="12,8">
                   <WrapPanel VerticalAlignment="Center">
                     <StackPanel Orientation="Horizontal" Margin="0,2,20,2">
-                      <TextBlock Text="检查间隔：" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" FontSize="12.5" />
+                      <TextBlock Text="檢查間隔：" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" FontSize="12.5" />
                       <ComboBox ItemsSource="{Binding ScanIntervalOptions}"
                                 SelectedItem="{Binding ScanIntervalMinutes, Mode=TwoWay}"
                                 Width="72" Margin="6,0" />
-                      <TextBlock Text="分钟" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" FontSize="12.5" />
+                      <TextBlock Text="分鐘" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" FontSize="12.5" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,2,0,2">
-                      <TextBlock Text="新文件等待时间：" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" FontSize="12.5" />
+                      <TextBlock Text="新文件等待時間：" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" FontSize="12.5" />
                       <ComboBox ItemsSource="{Binding NewFileWaitOptions}"
                                 SelectedItem="{Binding NewFileWaitMinutes, Mode=TwoWay}"
                                 Width="72" Margin="6,0" />
-                      <TextBlock Text="分钟（保护刚下载或编辑中档案）" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" FontSize="12.5" />
+                      <TextBlock Text="分鐘（保護剛下載或編輯中檔案）" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" FontSize="12.5" />
                     </StackPanel>
                   </WrapPanel>
                 </Border>
@@ -663,14 +663,14 @@
                          Margin="0,0,10,6"
                          Click="OrganizeNowButton_Click"
                          IsEnabled="{Binding CanOrganize}" />
-              <ui:Button Content="复原上次整理"
+              <ui:Button Content="復原上次整理"
                          Appearance="Secondary"
                          MinWidth="150"
                          Height="40"
                          Margin="0,0,10,6"
                          Click="UndoButton_Click"
                          IsEnabled="{Binding CanOrganize}" />
-              <ui:Button Content="开启整理资料夹"
+              <ui:Button Content="開啟整理資料夾"
                          Appearance="Secondary"
                          MinWidth="155"
                          Height="40"
@@ -689,7 +689,7 @@
               <!-- Folder Hierarchy Tree -->
               <Border Grid.Column="0" Style="{StaticResource CardStyle}" Padding="16">
                 <StackPanel>
-                  <TextBlock Text="分类方式" FontSize="15.5" FontWeight="SemiBold" Margin="0,0,0,8" />
+                  <TextBlock Text="分類方式" FontSize="15.5" FontWeight="SemiBold" Margin="0,0,0,8" />
                   <Border Style="{StaticResource SoftCardStyle}" Padding="12,10">
                     <StackPanel TextElement.FontFamily="Consolas, Microsoft JhengHei UI, sans-serif" TextElement.FontSize="12.5">
                       <TextBlock Text="整理 Organized" FontWeight="Bold" Foreground="{StaticResource BrandDarkBrush}" />
@@ -699,7 +699,7 @@
                       <TextBlock Text="└── 重複檔 Duplicates" Margin="0,4,0,0" Foreground="#B45309" FontWeight="SemiBold" />
                     </StackPanel>
                   </Border>
-                  <TextBlock Text="依档案最后修改时间自动建立年月资料夹；同名且 SHA-256 相同者移入重複檔。"
+                  <TextBlock Text="依檔案最後修改時間自動建立年月資料夾；同名且 SHA-256 相同者移入重複檔。"
                              FontSize="11.5"
                              Foreground="{DynamicResource TextSecondaryBrush}"
                              TextWrapping="Wrap"
@@ -710,7 +710,7 @@
               <!-- Supported Formats & Interactive State Guide -->
               <Border Grid.Column="2" Style="{StaticResource CardStyle}" Padding="16">
                 <StackPanel>
-                  <TextBlock Text="支援格式（15 种常见办公与文书格式）" FontSize="15.5" FontWeight="SemiBold" Margin="0,0,0,6" TextWrapping="Wrap" />
+                  <TextBlock Text="支援格式（15 種常見辦公與文書格式）" FontSize="15.5" FontWeight="SemiBold" Margin="0,0,0,6" TextWrapping="Wrap" />
                   <TextBlock Text="PDF、DOC、DOCX、XLS、XLSX、CSV、PPT、PPTX、TXT、RTF、MD、ODT、ODS、ODP、HWP"
                              FontSize="13"
                              FontWeight="SemiBold"
@@ -719,16 +719,16 @@
                              Margin="0,0,0,10" />
 
                   <Separator Background="{DynamicResource DividerBrush}" Margin="0,0,0,8" />
-                  <TextBlock Text="安全保护与互动状态说明" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,6" />
+                  <TextBlock Text="安全保護與互動狀態說明" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,6" />
                   <WrapPanel>
-                    <Border CornerRadius="6" Padding="7,3" Margin="0,0,6,6" Background="#E0F2FE"><TextBlock Text="正在扫描／正在搬移" FontSize="11" Foreground="#0369A1" /></Border>
+                    <Border CornerRadius="6" Padding="7,3" Margin="0,0,6,6" Background="#E0F2FE"><TextBlock Text="正在掃描／正在搬移" FontSize="11" Foreground="#0369A1" /></Border>
                     <Border CornerRadius="6" Padding="7,3" Margin="0,0,6,6" Background="#CCFBF1"><TextBlock Text="整理完成" FontSize="11" Foreground="#0F766E" /></Border>
-                    <Border CornerRadius="6" Padding="7,3" Margin="0,0,6,6" Background="#FEF3C7"><TextBlock Text="文件正在使用，因此略过" FontSize="11" Foreground="#B45309" /></Border>
+                    <Border CornerRadius="6" Padding="7,3" Margin="0,0,6,6" Background="#FEF3C7"><TextBlock Text="文件正在使用，因此略過" FontSize="11" Foreground="#B45309" /></Border>
                     <Border CornerRadius="6" Padding="7,3" Margin="0,0,6,6" Background="#CCFBF1"><TextBlock Text="同名文件已重新命名" FontSize="11" Foreground="#0F766E" /></Border>
-                    <Border CornerRadius="6" Padding="7,3" Margin="0,0,6,6" Background="#FEF3C7"><TextBlock Text="相同内容移入重复档" FontSize="11" Foreground="#B45309" /></Border>
-                    <Border CornerRadius="6" Padding="7,3" Margin="0,0,6,6" Background="#F1F5F9"><TextBlock Text="没有可整理文件" FontSize="11" Foreground="#475467" /></Border>
-                    <Border CornerRadius="6" Padding="7,3" Margin="0,0,6,6" Background="#CCFBF1"><TextBlock Text="可以复原／没有可复原纪录" FontSize="11" Foreground="#0F766E" /></Border>
-                    <Border CornerRadius="6" Padding="7,3" Margin="0,0,6,6" Background="#FEE2E2"><TextBlock Text="整理失败" FontSize="11" Foreground="#B91C1C" /></Border>
+                    <Border CornerRadius="6" Padding="7,3" Margin="0,0,6,6" Background="#FEF3C7"><TextBlock Text="相同內容移入重複檔" FontSize="11" Foreground="#B45309" /></Border>
+                    <Border CornerRadius="6" Padding="7,3" Margin="0,0,6,6" Background="#F1F5F9"><TextBlock Text="沒有可整理文件" FontSize="11" Foreground="#475467" /></Border>
+                    <Border CornerRadius="6" Padding="7,3" Margin="0,0,6,6" Background="#CCFBF1"><TextBlock Text="可以復原／沒有可復原紀錄" FontSize="11" Foreground="#0F766E" /></Border>
+                    <Border CornerRadius="6" Padding="7,3" Margin="0,0,6,6" Background="#FEE2E2"><TextBlock Text="整理失敗" FontSize="11" Foreground="#B91C1C" /></Border>
                   </WrapPanel>
                 </StackPanel>
               </Border>
@@ -739,11 +739,11 @@
               <StackPanel>
                 <DockPanel Margin="0,0,0,10">
                   <TextBlock DockPanel.Dock="Right"
-                             Text="显示文件类型、名称、原始位置、目的月份、整理时间与状态"
+                             Text="顯示文件類型、名稱、原始位置、目的月份、整理時間與狀態"
                              FontSize="11.5"
                              Foreground="{DynamicResource TextSecondaryBrush}"
                              VerticalAlignment="Center" />
-                  <TextBlock Text="最近整理结果" FontSize="16" FontWeight="SemiBold" />
+                  <TextBlock Text="最近整理結果" FontSize="16" FontWeight="SemiBold" />
                 </DockPanel>
 
                 <!-- Table Column Headers -->
@@ -757,12 +757,12 @@
                       <ColumnDefinition Width="115" />
                       <ColumnDefinition Width="130" />
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" Text="文件类型" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
-                    <TextBlock Grid.Column="1" Text="文件名称" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
+                    <TextBlock Grid.Column="0" Text="文件類型" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
+                    <TextBlock Grid.Column="1" Text="文件名稱" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
                     <TextBlock Grid.Column="2" Text="原始位置" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
                     <TextBlock Grid.Column="3" Text="目的月份" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
-                    <TextBlock Grid.Column="4" Text="整理时间" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
-                    <TextBlock Grid.Column="5" Text="状态" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Right" />
+                    <TextBlock Grid.Column="4" Text="整理時間" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
+                    <TextBlock Grid.Column="5" Text="狀態" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Right" />
                   </Grid>
                 </Border>
 
@@ -771,13 +771,13 @@
                         Visibility="{Binding HasRecentOrganizedItems, Converter={StaticResource InverseBoolToVis}}"
                         Padding="16">
                   <StackPanel HorizontalAlignment="Center">
-                    <TextBlock Text="目前尚无最近整理项目（没有可整理文件或尚未执行整理）"
+                    <TextBlock Text="目前尚無最近整理項目（沒有可整理文件或尚未執行整理）"
                                FontSize="13"
                                FontWeight="SemiBold"
                                Foreground="{DynamicResource TextSecondaryBrush}"
                                HorizontalAlignment="Center"
                                TextWrapping="Wrap" />
-                    <TextBlock Text="点击上方「立即整理」按钮扫描桌面文书，整理纪录将即时显示于此并支援一键复原。"
+                    <TextBlock Text="點擊上方「立即整理」按鈕掃描桌面文書，整理紀錄將即時顯示於此並支援一鍵復原。"
                                FontSize="11.5"
                                Foreground="{DynamicResource TextSecondaryBrush}"
                                HorizontalAlignment="Center"
@@ -839,7 +839,7 @@
         </ScrollViewer>
 
         <!-- ======================================================= -->
-        <!-- PAGE 3: 效能优化 (Performance Optimization)             -->
+        <!-- PAGE 3: 效能優化 (Performance Optimization)             -->
         <!-- ======================================================= -->
         <ScrollViewer VerticalScrollBarVisibility="Auto"
                       HorizontalScrollBarVisibility="Disabled"
@@ -861,12 +861,12 @@
                            Foreground="{Binding MonitorBadgeTone, Converter={StaticResource ToneToFg}}" />
               </Border>
               <StackPanel>
-                <TextBlock Text="电脑效能优化"
+                <TextBlock Text="電腦效能優化"
                            FontSize="24"
                            FontWeight="Bold"
                            Foreground="{DynamicResource TextPrimaryBrush}"
                            TextWrapping="Wrap" />
-                <TextBlock Text="专为 8GB RAM 与 256GB SSD 日常办公环境设计，仅执行安全、可随时还原的排程优先权调度。"
+                <TextBlock Text="專為 8GB RAM 與 256GB SSD 日常辦公環境設計，僅執行安全、可隨時還原的排程優先權調度。"
                            FontSize="13"
                            Foreground="{DynamicResource TextSecondaryBrush}"
                            TextWrapping="Wrap"
@@ -897,7 +897,7 @@
                   </DockPanel>
                   <TextBlock Text="{Binding CpuDisplay}" FontSize="28" FontWeight="Bold" Margin="0,6,0,8" />
                   <ProgressBar Style="{StaticResource MetricBarStyle}" Value="{Binding CpuPercent, Mode=OneWay}" />
-                  <TextBlock Text="连续高负载门槛：90%" FontSize="11" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,6,0,0" TextWrapping="Wrap" />
+                  <TextBlock Text="連續高負載門檻：90%" FontSize="11" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,6,0,0" TextWrapping="Wrap" />
                 </StackPanel>
               </Border>
 
@@ -918,7 +918,7 @@
                 </StackPanel>
               </Border>
 
-              <!-- 3. SSD I/O 压力及剩余空间 -->
+              <!-- 3. SSD I/O 壓力及剩餘空間 -->
               <Border Grid.Column="4" Style="{StaticResource CardStyle}" Padding="14">
                 <StackPanel>
                   <DockPanel>
@@ -927,7 +927,7 @@
                       <TextBlock Text="{Binding DiskStateLabel}" FontSize="10.5" FontWeight="SemiBold"
                                  Foreground="{Binding DiskStateTone, Converter={StaticResource ToneToFg}}" />
                     </Border>
-                    <TextBlock Text="SSD I/O 压力及剩余空间" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" />
+                    <TextBlock Text="SSD I/O 壓力及剩餘空間" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" />
                   </DockPanel>
                   <TextBlock Text="{Binding DiskDisplay}" FontSize="28" FontWeight="Bold" Margin="0,6,0,8" />
                   <ProgressBar Style="{StaticResource MetricBarStyle}" Value="{Binding DiskPercent, Mode=OneWay}" />
@@ -953,7 +953,7 @@
                              Height="40"
                              Margin="0,0,10,6"
                              Click="MonitorButton_Click" />
-                  <ui:Button Content="还原暂时设定"
+                  <ui:Button Content="還原暫時設定"
                              Appearance="Secondary"
                              MinWidth="145"
                              Height="40"
@@ -977,20 +977,20 @@
                       <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Grid.Row="0" Grid.Column="0" Text="当前前景应用程式" Foreground="{DynamicResource TextSecondaryBrush}" />
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="當前前景應用程式" Foreground="{DynamicResource TextSecondaryBrush}" />
                     <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding ForegroundText}" FontWeight="SemiBold" TextWrapping="Wrap" />
 
-                    <TextBlock Grid.Row="2" Grid.Column="0" Text="最近介入时间" Foreground="{DynamicResource TextSecondaryBrush}" />
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="最近介入時間" Foreground="{DynamicResource TextSecondaryBrush}" />
                     <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding LastInterventionDisplay}" FontWeight="Medium" TextWrapping="Wrap" />
 
-                    <TextBlock Grid.Row="4" Grid.Column="0" Text="冷却时间" Foreground="{DynamicResource TextSecondaryBrush}" />
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="冷卻時間" Foreground="{DynamicResource TextSecondaryBrush}" />
                     <WrapPanel Grid.Row="4" Grid.Column="1">
                       <TextBlock Text="{Binding CooldownDisplay}" FontWeight="Medium" />
                       <TextBlock Text="　｜　" Foreground="{DynamicResource TextMutedBrush}" />
                       <TextBlock Text="{Binding PressureSampleDisplay}" Foreground="{DynamicResource TextSecondaryBrush}" />
                     </WrapPanel>
 
-                    <TextBlock Grid.Row="6" Grid.Column="0" Text="当前系统状态" Foreground="{DynamicResource TextSecondaryBrush}" />
+                    <TextBlock Grid.Row="6" Grid.Column="0" Text="當前系統狀態" Foreground="{DynamicResource TextSecondaryBrush}" />
                     <TextBlock Grid.Row="6" Grid.Column="1" Text="{Binding StatusText}" FontWeight="SemiBold" Foreground="{StaticResource BrandDarkBrush}" TextWrapping="Wrap" />
                   </Grid>
                 </Border>
@@ -1010,7 +1010,7 @@
                                FontWeight="SemiBold"
                                Foreground="{Binding RescueImprovementTone, Converter={StaticResource ToneToFg}}" />
                   </Border>
-                  <TextBlock Text="效能急救介入前后比较" FontSize="16" FontWeight="SemiBold" />
+                  <TextBlock Text="效能急救介入前後比較" FontSize="16" FontWeight="SemiBold" />
                 </DockPanel>
 
                 <!-- Before -> After Metric Comparison Row -->
@@ -1025,21 +1025,21 @@
 
                   <Border Grid.Column="0" Style="{StaticResource SoftCardStyle}" Padding="12,9">
                     <StackPanel>
-                      <TextBlock Text="CPU：介入前 → 介入后" FontSize="11.5" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" />
+                      <TextBlock Text="CPU：介入前 → 介入後" FontSize="11.5" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" />
                       <TextBlock Text="{Binding RescueCpuComparison}" FontSize="12.5" FontWeight="Bold" Margin="0,5,0,0" TextWrapping="Wrap" />
                     </StackPanel>
                   </Border>
 
                   <Border Grid.Column="2" Style="{StaticResource SoftCardStyle}" Padding="12,9">
                     <StackPanel>
-                      <TextBlock Text="RAM：介入前 → 介入后" FontSize="11.5" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" />
+                      <TextBlock Text="RAM：介入前 → 介入後" FontSize="11.5" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" />
                       <TextBlock Text="{Binding RescueRamComparison}" FontSize="12.5" FontWeight="Bold" Margin="0,5,0,0" TextWrapping="Wrap" />
                     </StackPanel>
                   </Border>
 
                   <Border Grid.Column="4" Style="{StaticResource SoftCardStyle}" Padding="12,9">
                     <StackPanel>
-                      <TextBlock Text="SSD：介入前 → 介入后" FontSize="11.5" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" />
+                      <TextBlock Text="SSD：介入前 → 介入後" FontSize="11.5" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" />
                       <TextBlock Text="{Binding RescueSsdComparison}" FontSize="12.5" FontWeight="Bold" Margin="0,5,0,0" TextWrapping="Wrap" />
                     </StackPanel>
                   </Border>
@@ -1048,10 +1048,10 @@
                 <!-- Safe Adjustments & Improvement Analysis -->
                 <Border Style="{StaticResource SoftCardStyle}" Padding="12,10">
                   <StackPanel>
-                    <TextBlock Text="执行了哪些安全调整：" FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
+                    <TextBlock Text="執行了哪些安全調整：" FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
                     <TextBlock Text="{Binding RescueActionsSummary}" FontSize="12.5" FontWeight="Medium" Margin="0,3,0,8" TextWrapping="Wrap" />
 
-                    <TextBlock Text="是否观察到改善与原因说明：" FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
+                    <TextBlock Text="是否觀察到改善與原因說明：" FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
                     <TextBlock Text="{Binding RescueNoImprovementReason}" FontSize="12" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,3,0,0" TextWrapping="Wrap" />
                   </StackPanel>
                 </Border>
@@ -1062,7 +1062,7 @@
         </ScrollViewer>
 
         <!-- ======================================================= -->
-        <!-- PAGE 4: 活动纪录 (Activity Log)                         -->
+        <!-- PAGE 4: 活動紀錄 (Activity Log)                         -->
         <!-- ======================================================= -->
         <ScrollViewer VerticalScrollBarVisibility="Auto"
                       HorizontalScrollBarVisibility="Disabled"
@@ -1073,18 +1073,18 @@
             <!-- Header -->
             <DockPanel Margin="0,0,0,12">
               <ui:Button DockPanel.Dock="Right"
-                         Content="重新整理纪录"
+                         Content="重新整理紀錄"
                          Appearance="Secondary"
                          VerticalAlignment="Top"
                          Height="36"
                          Margin="10,0,0,0"
                          Click="RefreshActivityLogButton_Click" />
               <StackPanel>
-                <TextBlock Text="活动纪录"
+                <TextBlock Text="活動紀錄"
                            FontSize="24"
                            FontWeight="Bold"
                            Foreground="{DynamicResource TextPrimaryBrush}" />
-                <TextBlock Text="完整记录桌面文件归档、复原与安全效能调度历程，支援依类别筛选查阅。"
+                <TextBlock Text="完整記錄桌面文件歸檔、復原與安全效能調度歷程，支援依類別篩選查閱。"
                            FontSize="13"
                            Foreground="{DynamicResource TextSecondaryBrush}"
                            TextWrapping="Wrap"
@@ -1092,7 +1092,7 @@
               </StackPanel>
             </DockPanel>
 
-            <!-- Privacy Notice Banner (Required exact wording) -->
+            <!-- Privacy Notice Banner (Required exact wording in Traditional Chinese) -->
             <Border Style="{StaticResource AccentBannerStyle}" Padding="14,10" Margin="0,0,0,14">
               <Grid>
                 <Grid.ColumnDefinitions>
@@ -1107,7 +1107,7 @@
                       VerticalAlignment="Center"
                       Margin="0,0,10,0" />
                 <TextBlock Grid.Column="1"
-                           Text="活动纪录只保存档案名称、路径、操作结果及效能指标，不读取或上传文件内容。"
+                           Text="活動紀錄只保存檔案名稱、路徑、操作結果及效能指標，不讀取或上傳文件內容。"
                            FontSize="13"
                            FontWeight="SemiBold"
                            Foreground="{StaticResource BrandDarkBrush}"
@@ -1116,7 +1116,7 @@
               </Grid>
             </Border>
 
-            <!-- Filter Bar: 全部 / 文件整理 / 效能优化 / 警告 / 错误 + Search -->
+            <!-- Filter Bar: 全部 / 文件整理 / 效能優化 / 警告 / 錯誤 + Search -->
             <Border Style="{StaticResource CardStyle}" Padding="14,10" Margin="0,0,0,14">
               <DockPanel>
                 <TextBox DockPanel.Dock="Right"
@@ -1125,7 +1125,7 @@
                          VerticalContentAlignment="Center"
                          Padding="8,0"
                          Margin="8,0,0,0"
-                         ToolTip="输入关键字筛选档案名称或动作"
+                         ToolTip="輸入關鍵字篩選檔案名稱或動作"
                          Text="{Binding ActivitySearchText, UpdateSourceTrigger=PropertyChanged}" />
                 <WrapPanel VerticalAlignment="Center">
                   <RadioButton Style="{StaticResource FilterPillRadioButtonStyle}"
@@ -1137,17 +1137,17 @@
                                GroupName="ActivityFilterGroup"
                                IsChecked="{Binding SelectedActivityFilter, Converter={StaticResource StringEqToBool}, ConverterParameter=文件整理, Mode=TwoWay}" />
                   <RadioButton Style="{StaticResource FilterPillRadioButtonStyle}"
-                               Content="效能优化"
+                               Content="效能優化"
                                GroupName="ActivityFilterGroup"
-                               IsChecked="{Binding SelectedActivityFilter, Converter={StaticResource StringEqToBool}, ConverterParameter=效能优化, Mode=TwoWay}" />
+                               IsChecked="{Binding SelectedActivityFilter, Converter={StaticResource StringEqToBool}, ConverterParameter=效能優化, Mode=TwoWay}" />
                   <RadioButton Style="{StaticResource FilterPillRadioButtonStyle}"
                                Content="警告"
                                GroupName="ActivityFilterGroup"
                                IsChecked="{Binding SelectedActivityFilter, Converter={StaticResource StringEqToBool}, ConverterParameter=警告, Mode=TwoWay}" />
                   <RadioButton Style="{StaticResource FilterPillRadioButtonStyle}"
-                               Content="错误"
+                               Content="錯誤"
                                GroupName="ActivityFilterGroup"
-                               IsChecked="{Binding SelectedActivityFilter, Converter={StaticResource StringEqToBool}, ConverterParameter=错误, Mode=TwoWay}" />
+                               IsChecked="{Binding SelectedActivityFilter, Converter={StaticResource StringEqToBool}, ConverterParameter=錯誤, Mode=TwoWay}" />
                 </WrapPanel>
               </DockPanel>
             </Border>
@@ -1157,10 +1157,10 @@
               <StackPanel>
                 <DockPanel Margin="0,0,0,10">
                   <TextBlock DockPanel.Dock="Right" Text="{Binding ActivityCountSummary}" FontSize="11.5" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" />
-                  <TextBlock Text="操作与调度明细" FontSize="15.5" FontWeight="SemiBold" />
+                  <TextBlock Text="操作與調度明細" FontSize="15.5" FontWeight="SemiBold" />
                 </DockPanel>
 
-                <!-- Table Header: 时间 / 类别 / 动作 / 对象 / 执行结果 -->
+                <!-- Table Header: 時間 / 類別 / 動作 / 對象 / 執行結果 -->
                 <Border Background="{DynamicResource SubtleSurfaceBrush}" CornerRadius="8" Padding="10,7" Margin="0,0,0,6">
                   <Grid>
                     <Grid.ColumnDefinitions>
@@ -1170,11 +1170,11 @@
                       <ColumnDefinition Width="1.1*" />
                       <ColumnDefinition Width="1.5*" />
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" Text="时间" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
-                    <TextBlock Grid.Column="1" Text="类别" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
-                    <TextBlock Grid.Column="2" Text="动作" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
-                    <TextBlock Grid.Column="3" Text="对象" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
-                    <TextBlock Grid.Column="4" Text="执行结果" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
+                    <TextBlock Grid.Column="0" Text="時間" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
+                    <TextBlock Grid.Column="1" Text="類別" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
+                    <TextBlock Grid.Column="2" Text="動作" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
+                    <TextBlock Grid.Column="3" Text="對象" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
+                    <TextBlock Grid.Column="4" Text="執行結果" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource TextSecondaryBrush}" />
                   </Grid>
                 </Border>
 
@@ -1183,12 +1183,12 @@
                         Visibility="{Binding HasFilteredActivityItems, Converter={StaticResource InverseBoolToVis}}"
                         Padding="18">
                   <StackPanel HorizontalAlignment="Center">
-                    <TextBlock Text="目前筛选条件下尚无活动纪录"
+                    <TextBlock Text="目前篩選條件下尚無活動紀錄"
                                FontSize="13.5"
                                FontWeight="SemiBold"
                                Foreground="{DynamicResource TextSecondaryBrush}"
                                HorizontalAlignment="Center" />
-                    <TextBlock Text="当您执行「立即整理」、「复原上次整理」或「立即效能急救」后，纪录将即时列于此处。"
+                    <TextBlock Text="當您執行「立即整理」、「復原上次整理」或「立即效能急救」後，紀錄將即時列於此處。"
                                FontSize="11.5"
                                Foreground="{DynamicResource TextSecondaryBrush}"
                                HorizontalAlignment="Center"
@@ -1236,7 +1236,7 @@
         </ScrollViewer>
 
         <!-- ======================================================= -->
-        <!-- PAGE 5: 设定 (Settings)                                 -->
+        <!-- PAGE 5: 設定 (Settings)                                 -->
         <!-- ======================================================= -->
         <ScrollViewer VerticalScrollBarVisibility="Auto"
                       HorizontalScrollBarVisibility="Disabled"
@@ -1244,20 +1244,20 @@
           <StackPanel Margin="20,16,20,22"
                       MaxWidth="{Binding ViewportWidth, RelativeSource={RelativeSource AncestorType=ScrollViewer}}">
 
-            <TextBlock Text="系统与偏好设定"
+            <TextBlock Text="系統與偏好設定"
                        FontSize="24"
                        FontWeight="Bold"
                        Foreground="{DynamicResource TextPrimaryBrush}" />
-            <TextBlock Text="调整桌面文件自动整理规则、背景智慧效能监控门槛及一般外观偏好。"
+            <TextBlock Text="調整桌面文件自動整理規則、背景智慧效能監控門檻及一般外觀偏好。"
                        FontSize="13"
                        Foreground="{DynamicResource TextSecondaryBrush}"
                        TextWrapping="Wrap"
                        Margin="0,4,0,14" />
 
-            <!-- SECTION 1: 文件整理设定 -->
+            <!-- SECTION 1: 文件整理設定 -->
             <Border Style="{StaticResource CardStyle}" Padding="16" Margin="0,0,0,14">
               <StackPanel>
-                <TextBlock Text="文件整理设定" FontSize="16.5" FontWeight="SemiBold" Margin="0,0,0,12" />
+                <TextBlock Text="文件整理設定" FontSize="16.5" FontWeight="SemiBold" Margin="0,0,0,12" />
 
                 <Grid>
                   <Grid.RowDefinitions>
@@ -1278,45 +1278,45 @@
                     <ColumnDefinition Width="*" />
                   </Grid.ColumnDefinitions>
 
-                  <!-- 自动整理 -->
-                  <TextBlock Grid.Row="0" Grid.Column="0" Text="自动整理" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- 自動整理 -->
+                  <TextBlock Grid.Row="0" Grid.Column="0" Text="自動整理" FontWeight="Medium" VerticalAlignment="Center" />
                   <CheckBox Grid.Row="0" Grid.Column="1" Style="{StaticResource FluentToggleSwitchStyle}"
                             IsChecked="{Binding AutoOrganizeEnabled}">
-                    <TextBlock Text="定期自动扫描并归档桌面第一层文书" TextWrapping="Wrap" />
+                    <TextBlock Text="定期自動掃描並歸檔桌面第一層文書" TextWrapping="Wrap" />
                   </CheckBox>
 
-                  <!-- 检查间隔 -->
-                  <TextBlock Grid.Row="2" Grid.Column="0" Text="检查间隔" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- 檢查間隔 -->
+                  <TextBlock Grid.Row="2" Grid.Column="0" Text="檢查間隔" FontWeight="Medium" VerticalAlignment="Center" />
                   <WrapPanel Grid.Row="2" Grid.Column="1" VerticalAlignment="Center">
                     <ComboBox ItemsSource="{Binding ScanIntervalOptions}" SelectedItem="{Binding ScanIntervalMinutes, Mode=TwoWay}" Width="82" />
-                    <TextBlock Text="分钟（预设 15 分钟）" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="8,0,0,0" />
+                    <TextBlock Text="分鐘（預設 15 分鐘）" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="8,0,0,0" />
                   </WrapPanel>
 
-                  <!-- 新文件等待时间 -->
-                  <TextBlock Grid.Row="4" Grid.Column="0" Text="新文件等待时间" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- 新文件等待時間 -->
+                  <TextBlock Grid.Row="4" Grid.Column="0" Text="新文件等待時間" FontWeight="Medium" VerticalAlignment="Center" />
                   <WrapPanel Grid.Row="4" Grid.Column="1" VerticalAlignment="Center">
                     <ComboBox ItemsSource="{Binding NewFileWaitOptions}" SelectedItem="{Binding NewFileWaitMinutes, Mode=TwoWay}" Width="82" />
-                    <TextBlock Text="分钟（预设 60 分钟，避免搬移刚下载或编辑中的文件）" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="8,0,0,0" TextWrapping="Wrap" />
+                    <TextBlock Text="分鐘（預設 60 分鐘，避免搬移剛下載或編輯中的文件）" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="8,0,0,0" TextWrapping="Wrap" />
                   </WrapPanel>
 
-                  <!-- 整理资料夹 -->
-                  <TextBlock Grid.Row="6" Grid.Column="0" Text="整理资料夹" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- 整理資料夾 -->
+                  <TextBlock Grid.Row="6" Grid.Column="0" Text="整理資料夾" FontWeight="Medium" VerticalAlignment="Center" />
                   <DockPanel Grid.Row="6" Grid.Column="1">
-                    <ui:Button DockPanel.Dock="Right" Content="开启整理资料夹" Appearance="Secondary" Height="30" FontSize="12" Margin="8,0,0,0" Click="OpenOrganizedFolder_Click" />
+                    <ui:Button DockPanel.Dock="Right" Content="開啟整理資料夾" Appearance="Secondary" Height="30" FontSize="12" Margin="8,0,0,0" Click="OpenOrganizedFolder_Click" />
                     <TextBox Text="{Binding OrganizedFolderName, UpdateSourceTrigger=LostFocus}" VerticalContentAlignment="Center" Height="30" Padding="8,0" />
                   </DockPanel>
 
-                  <!-- 重复档识别 -->
-                  <TextBlock Grid.Row="8" Grid.Column="0" Text="重复档识别" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- 重複檔識別 -->
+                  <TextBlock Grid.Row="8" Grid.Column="0" Text="重複檔識別" FontWeight="Medium" VerticalAlignment="Center" />
                   <CheckBox Grid.Row="8" Grid.Column="1" Style="{StaticResource FluentToggleSwitchStyle}"
                             IsChecked="{Binding DuplicateCheckEnabled}">
-                    <TextBlock Text="同名档案以 SHA-256 比对内容；相同内容移入「重複檔 Duplicates」" TextWrapping="Wrap" />
+                    <TextBlock Text="同名檔案以 SHA-256 比對內容；相同內容移入「重複檔 Duplicates」" TextWrapping="Wrap" />
                   </CheckBox>
 
-                  <!-- 复原纪录 -->
-                  <TextBlock Grid.Row="10" Grid.Column="0" Text="复原纪录" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- 復原紀錄 -->
+                  <TextBlock Grid.Row="10" Grid.Column="0" Text="復原紀錄" FontWeight="Medium" VerticalAlignment="Center" />
                   <DockPanel Grid.Row="10" Grid.Column="1">
-                    <ui:Button DockPanel.Dock="Right" Content="复原上次整理" Appearance="Secondary" Height="30" FontSize="12" Margin="8,0,0,0" Click="UndoButton_Click" IsEnabled="{Binding CanOrganize}" />
+                    <ui:Button DockPanel.Dock="Right" Content="復原上次整理" Appearance="Secondary" Height="30" FontSize="12" Margin="8,0,0,0" Click="UndoButton_Click" IsEnabled="{Binding CanOrganize}" />
                     <TextBlock Text="{Binding UndoStatusBadge}" VerticalAlignment="Center" Foreground="{StaticResource BrandDarkBrush}" FontWeight="SemiBold" TextWrapping="Wrap" />
                   </DockPanel>
                 </Grid>
@@ -1324,8 +1324,8 @@
                 <!-- 文件格式 (15 supported extensions) -->
                 <Separator Background="{DynamicResource DividerBrush}" Margin="0,12,0,10" />
                 <DockPanel Margin="0,0,0,8">
-                  <ui:Button DockPanel.Dock="Right" Content="恢复预设 15 种格式" Appearance="Secondary" Height="28" FontSize="11.5" Click="ResetDefaultFormatsButton_Click" />
-                  <TextBlock Text="文件格式（勾选要纳入自动整理的文书副档名）" FontWeight="SemiBold" VerticalAlignment="Center" TextWrapping="Wrap" />
+                  <ui:Button DockPanel.Dock="Right" Content="恢復預設 15 種格式" Appearance="Secondary" Height="28" FontSize="11.5" Click="ResetDefaultFormatsButton_Click" />
+                  <TextBlock Text="文件格式（勾選要納入自動整理的文書副檔名）" FontWeight="SemiBold" VerticalAlignment="Center" TextWrapping="Wrap" />
                 </DockPanel>
                 <ItemsControl ItemsSource="{Binding FormatChips}">
                   <ItemsControl.ItemsPanel>
@@ -1344,10 +1344,10 @@
               </StackPanel>
             </Border>
 
-            <!-- SECTION 2: 效能设定 -->
+            <!-- SECTION 2: 效能設定 -->
             <Border Style="{StaticResource CardStyle}" Padding="16" Margin="0,0,0,14">
               <StackPanel>
-                <TextBlock Text="效能设定" FontSize="16.5" FontWeight="SemiBold" Margin="0,0,0,12" />
+                <TextBlock Text="效能設定" FontSize="16.5" FontWeight="SemiBold" Margin="0,0,0,12" />
 
                 <Grid>
                   <Grid.RowDefinitions>
@@ -1368,55 +1368,55 @@
                     <ColumnDefinition Width="*" />
                   </Grid.ColumnDefinitions>
 
-                  <!-- 背景监控 -->
-                  <TextBlock Grid.Row="0" Grid.Column="0" Text="背景监控" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- 背景監控 -->
+                  <TextBlock Grid.Row="0" Grid.Column="0" Text="背景監控" FontWeight="Medium" VerticalAlignment="Center" />
                   <CheckBox Grid.Row="0" Grid.Column="1" Style="{StaticResource FluentToggleSwitchStyle}"
                             IsChecked="{Binding BackgroundMonitoringEnabled}">
-                    <TextBlock Text="启动低频背景智慧监控（连续压力达标才自动调度）" TextWrapping="Wrap" />
+                    <TextBlock Text="啟動低頻背景智慧監控（連續壓力達標才自動調度）" TextWrapping="Wrap" />
                   </CheckBox>
 
-                  <!-- 监控间隔 -->
-                  <TextBlock Grid.Row="2" Grid.Column="0" Text="监控间隔" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- 監控間隔 -->
+                  <TextBlock Grid.Row="2" Grid.Column="0" Text="監控間隔" FontWeight="Medium" VerticalAlignment="Center" />
                   <WrapPanel Grid.Row="2" Grid.Column="1" VerticalAlignment="Center">
                     <ComboBox ItemsSource="{Binding MonitorIntervalOptions}" SelectedItem="{Binding MonitorIntervalSeconds, Mode=TwoWay}" Width="82" />
-                    <TextBlock Text="秒（预设 5 秒低开销取样）" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="8,0,0,0" />
+                    <TextBlock Text="秒（預設 5 秒低開銷取樣）" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="8,0,0,0" />
                   </WrapPanel>
 
-                  <!-- 连续压力触发次数 -->
-                  <TextBlock Grid.Row="4" Grid.Column="0" Text="连续压力触发次数" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- 連續壓力觸發次數 -->
+                  <TextBlock Grid.Row="4" Grid.Column="0" Text="連續壓力觸發次數" FontWeight="Medium" VerticalAlignment="Center" />
                   <WrapPanel Grid.Row="4" Grid.Column="1" VerticalAlignment="Center">
                     <ComboBox ItemsSource="{Binding PressureTriggerOptions}" SelectedItem="{Binding PressureTriggerCount, Mode=TwoWay}" Width="82" />
-                    <TextBlock Text="次（预设连续 3 次达标才介入）" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="8,0,0,0" />
+                    <TextBlock Text="次（預設連續 3 次達標才介入）" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="8,0,0,0" />
                   </WrapPanel>
 
-                  <!-- 冷却时间 -->
-                  <TextBlock Grid.Row="6" Grid.Column="0" Text="冷却时间" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- 冷卻時間 -->
+                  <TextBlock Grid.Row="6" Grid.Column="0" Text="冷卻時間" FontWeight="Medium" VerticalAlignment="Center" />
                   <WrapPanel Grid.Row="6" Grid.Column="1" VerticalAlignment="Center">
                     <ComboBox ItemsSource="{Binding CooldownMinuteOptions}" SelectedItem="{Binding CooldownMinutes, Mode=TwoWay}" Width="82" />
-                    <TextBlock Text="分钟（预设 5 分钟，避免频繁重复介入）" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="8,0,0,0" />
+                    <TextBlock Text="分鐘（預設 5 分鐘，避免頻繁重複介入）" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="8,0,0,0" />
                   </WrapPanel>
 
-                  <!-- 停止时自动还原 -->
-                  <TextBlock Grid.Row="8" Grid.Column="0" Text="停止时自动还原" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- 停止時自動還原 -->
+                  <TextBlock Grid.Row="8" Grid.Column="0" Text="停止時自動還原" FontWeight="Medium" VerticalAlignment="Center" />
                   <CheckBox Grid.Row="8" Grid.Column="1" Style="{StaticResource FluentToggleSwitchStyle}"
                             IsChecked="{Binding AutoRestoreOnStop}">
-                    <TextBlock Text="停止背景监控或退出程式时，自动还原所有暂时优先权调整" TextWrapping="Wrap" />
+                    <TextBlock Text="停止背景監控或退出程式時，自動還原所有暫時優先權調整" TextWrapping="Wrap" />
                   </CheckBox>
 
-                  <!-- SSD 空间警告门槛 -->
-                  <TextBlock Grid.Row="10" Grid.Column="0" Text="SSD 空间警告门槛" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- SSD 空間警告門檻 -->
+                  <TextBlock Grid.Row="10" Grid.Column="0" Text="SSD 空間警告門檻" FontWeight="Medium" VerticalAlignment="Center" />
                   <WrapPanel Grid.Row="10" Grid.Column="1" VerticalAlignment="Center">
                     <ComboBox ItemsSource="{Binding SsdThresholdOptions}" SelectedItem="{Binding SsdWarningThresholdPercent, Mode=TwoWay}" Width="82" />
-                    <TextBlock Text="%（预设低于 15% 时提醒保留可用空间）" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="8,0,0,0" />
+                    <TextBlock Text="%（預設低於 15% 時提醒保留可用空間）" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="8,0,0,0" />
                   </WrapPanel>
                 </Grid>
               </StackPanel>
             </Border>
 
-            <!-- SECTION 3: 一般设定 -->
+            <!-- SECTION 3: 一般設定 -->
             <Border Style="{StaticResource CardStyle}" Padding="16">
               <StackPanel>
-                <TextBlock Text="一般设定" FontSize="16.5" FontWeight="SemiBold" Margin="0,0,0,12" />
+                <TextBlock Text="一般設定" FontSize="16.5" FontWeight="SemiBold" Margin="0,0,0,12" />
 
                 <Grid>
                   <Grid.RowDefinitions>
@@ -1439,50 +1439,50 @@
                     <ColumnDefinition Width="*" />
                   </Grid.ColumnDefinitions>
 
-                  <!-- 随 Windows 登录启动 -->
-                  <TextBlock Grid.Row="0" Grid.Column="0" Text="随 Windows 登录启动" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- 隨 Windows 登入啟動 -->
+                  <TextBlock Grid.Row="0" Grid.Column="0" Text="隨 Windows 登入啟動" FontWeight="Medium" VerticalAlignment="Center" />
                   <CheckBox Grid.Row="0" Grid.Column="1" Style="{StaticResource FluentToggleSwitchStyle}"
                             IsChecked="{Binding LaunchAtLoginPreference}">
-                    <TextBlock Text="记住登录启动偏好（可由安装程序设定随 Windows 登录自动启动）" TextWrapping="Wrap" />
+                    <TextBlock Text="記住登入啟動偏好（可由安裝程式設定隨 Windows 登入自動啟動）" TextWrapping="Wrap" />
                   </CheckBox>
 
-                  <!-- 启动后最小化 -->
-                  <TextBlock Grid.Row="2" Grid.Column="0" Text="启动后最小化" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- 啟動後最小化 -->
+                  <TextBlock Grid.Row="2" Grid.Column="0" Text="啟動後最小化" FontWeight="Medium" VerticalAlignment="Center" />
                   <CheckBox Grid.Row="2" Grid.Column="1" Style="{StaticResource FluentToggleSwitchStyle}"
                             IsChecked="{Binding StartMinimizedPreference}">
-                    <TextBlock Text="程式启动时自动最小化视窗，不打扰日常办公" TextWrapping="Wrap" />
+                    <TextBlock Text="程式啟動時自動最小化視窗，不打擾日常辦公" TextWrapping="Wrap" />
                   </CheckBox>
 
-                  <!-- 关闭视窗后留在系统匣 -->
-                  <TextBlock Grid.Row="4" Grid.Column="0" Text="关闭视窗后留在系统匣" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- 關閉視窗後留在系統匣 -->
+                  <TextBlock Grid.Row="4" Grid.Column="0" Text="關閉視窗後留在系統匣" FontWeight="Medium" VerticalAlignment="Center" />
                   <CheckBox Grid.Row="4" Grid.Column="1" Style="{StaticResource FluentToggleSwitchStyle}"
                             IsChecked="{Binding MinimizeToTrayOnClose}">
-                    <TextBlock Text="点击右上角关闭按钮时最小化至系统匣继续守护" TextWrapping="Wrap" />
+                    <TextBlock Text="點擊右上角關閉按鈕時最小化至系統匣繼續守護" TextWrapping="Wrap" />
                   </CheckBox>
 
-                  <!-- 主题 -->
-                  <TextBlock Grid.Row="6" Grid.Column="0" Text="主题" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- 主題 -->
+                  <TextBlock Grid.Row="6" Grid.Column="0" Text="主題" FontWeight="Medium" VerticalAlignment="Center" />
                   <WrapPanel Grid.Row="6" Grid.Column="1" VerticalAlignment="Center">
                     <ComboBox ItemsSource="{Binding ThemeOptions}" SelectedItem="{Binding SelectedThemeMode, Mode=TwoWay}" Width="110" />
-                    <TextBlock Text="（Light 浅色主题为主，支援 Dark 深色主题）" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="8,0,0,0" />
+                    <TextBlock Text="（Light 淺色主題為主，支援 Dark 深色主題）" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="8,0,0,0" />
                   </WrapPanel>
 
-                  <!-- 语言 -->
-                  <TextBlock Grid.Row="8" Grid.Column="0" Text="语言" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- 語言 -->
+                  <TextBlock Grid.Row="8" Grid.Column="0" Text="語言" FontWeight="Medium" VerticalAlignment="Center" />
                   <WrapPanel Grid.Row="8" Grid.Column="1" VerticalAlignment="Center">
                     <ComboBox ItemsSource="{Binding LanguageOptions}" SelectedItem="{Binding SelectedLanguageMode, Mode=TwoWay}" Width="110" />
-                    <TextBlock Text="（繁体中文／中文介面）" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="8,0,0,0" />
+                    <TextBlock Text="（繁體中文介面）" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="8,0,0,0" />
                   </WrapPanel>
 
-                  <!-- 开启日志资料夹 -->
-                  <TextBlock Grid.Row="10" Grid.Column="0" Text="开启日志资料夹" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- 開啟日誌資料夾 -->
+                  <TextBlock Grid.Row="10" Grid.Column="0" Text="開啟日誌資料夾" FontWeight="Medium" VerticalAlignment="Center" />
                   <WrapPanel Grid.Row="10" Grid.Column="1" VerticalAlignment="Center">
-                    <ui:Button Content="开启日志资料夹" Appearance="Secondary" Height="32" FontSize="12" Click="OpenLogFolder_Click" />
+                    <ui:Button Content="開啟日誌資料夾" Appearance="Secondary" Height="32" FontSize="12" Click="OpenLogFolder_Click" />
                     <TextBlock Text="{Binding DataDirectoryDisplay}" FontSize="11.5" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="10,0,0,0" TextWrapping="Wrap" />
                   </WrapPanel>
 
-                  <!-- 版本资讯 -->
-                  <TextBlock Grid.Row="12" Grid.Column="0" Text="版本资讯" FontWeight="Medium" VerticalAlignment="Center" />
+                  <!-- 版本資訊 -->
+                  <TextBlock Grid.Row="12" Grid.Column="0" Text="版本資訊" FontWeight="Medium" VerticalAlignment="Center" />
                   <TextBlock Grid.Row="12" Grid.Column="1" Text="{Binding AppVersionDisplay}" FontWeight="SemiBold" Foreground="{StaticResource BrandDarkBrush}" VerticalAlignment="Center" TextWrapping="Wrap" />
                 </Grid>
               </StackPanel>
@@ -1492,7 +1492,7 @@
         </ScrollViewer>
 
         <!-- ======================================================= -->
-        <!-- PAGE 6: 使用说明 (User Guide & Dynamic Paths)           -->
+        <!-- PAGE 6: 使用說明 (User Guide & Dynamic Paths)           -->
         <!-- ======================================================= -->
         <ScrollViewer VerticalScrollBarVisibility="Auto"
                       HorizontalScrollBarVisibility="Disabled"
@@ -1504,7 +1504,7 @@
             <Border Style="{StaticResource CardStyle}" Margin="0,0,0,14" Padding="16,12">
               <DockPanel>
                 <ui:Button DockPanel.Dock="Right"
-                           Content="重新产生说明书"
+                           Content="重新產生說明書"
                            Appearance="Primary"
                            VerticalAlignment="Center"
                            Height="38"
@@ -1523,11 +1523,11 @@
               <StackPanel>
                 <DockPanel Margin="0,0,0,10">
                   <TextBlock DockPanel.Dock="Right"
-                             Text="依目前执行环境与登入使用者自动侦测"
+                             Text="依目前執行環境與登入使用者自動偵測"
                              FontSize="11.5"
                              Foreground="{DynamicResource TextSecondaryBrush}"
                              VerticalAlignment="Center" />
-                  <TextBlock Text="动态可携式路径资讯" FontSize="16.5" FontWeight="SemiBold" />
+                  <TextBlock Text="動態可攜式路徑資訊" FontSize="16.5" FontWeight="SemiBold" />
                 </DockPanel>
 
                 <Border Style="{StaticResource SoftCardStyle}" Padding="14,12">
@@ -1548,27 +1548,27 @@
                       <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Grid.Row="0" Grid.Column="0" Text="当前安装路径" Foreground="{DynamicResource TextSecondaryBrush}" FontWeight="Medium" />
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="當前安裝路徑" Foreground="{DynamicResource TextSecondaryBrush}" FontWeight="Medium" />
                     <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding InstallPathDisplay}" FontFamily="Consolas, Microsoft JhengHei UI" FontSize="12" TextWrapping="Wrap" />
 
-                    <TextBlock Grid.Row="2" Grid.Column="0" Text="当前桌面路径" Foreground="{DynamicResource TextSecondaryBrush}" FontWeight="Medium" />
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="當前桌面路徑" Foreground="{DynamicResource TextSecondaryBrush}" FontWeight="Medium" />
                     <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding DesktopPath}" FontFamily="Consolas, Microsoft JhengHei UI" FontSize="12" TextWrapping="Wrap" />
 
-                    <TextBlock Grid.Row="4" Grid.Column="0" Text="当前整理资料夹路径" Foreground="{DynamicResource TextSecondaryBrush}" FontWeight="Medium" />
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="當前整理資料夾路徑" Foreground="{DynamicResource TextSecondaryBrush}" FontWeight="Medium" />
                     <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding OrganizedPath}" FontFamily="Consolas, Microsoft JhengHei UI" FontSize="12" FontWeight="SemiBold" Foreground="{StaticResource BrandDarkBrush}" TextWrapping="Wrap" />
 
-                    <TextBlock Grid.Row="6" Grid.Column="0" Text="设定档路径" Foreground="{DynamicResource TextSecondaryBrush}" FontWeight="Medium" />
+                    <TextBlock Grid.Row="6" Grid.Column="0" Text="設定檔路徑" Foreground="{DynamicResource TextSecondaryBrush}" FontWeight="Medium" />
                     <TextBlock Grid.Row="6" Grid.Column="1" Text="{Binding SettingsFilePathDisplay}" FontFamily="Consolas, Microsoft JhengHei UI" FontSize="12" TextWrapping="Wrap" />
 
-                    <TextBlock Grid.Row="8" Grid.Column="0" Text="日志路径" Foreground="{DynamicResource TextSecondaryBrush}" FontWeight="Medium" />
+                    <TextBlock Grid.Row="8" Grid.Column="0" Text="日誌路徑" Foreground="{DynamicResource TextSecondaryBrush}" FontWeight="Medium" />
                     <TextBlock Grid.Row="8" Grid.Column="1" Text="{Binding LogFilePathDisplay}" FontFamily="Consolas, Microsoft JhengHei UI" FontSize="12" TextWrapping="Wrap" />
                   </Grid>
                 </Border>
 
                 <WrapPanel Margin="0,10,0,0">
-                  <ui:Button Content="重新产生说明书" Appearance="Secondary" Height="34" FontSize="12" Margin="0,0,8,0" Click="GenerateManualButton_Click" />
-                  <ui:Button Content="开启整理资料夹" Appearance="Secondary" Height="34" FontSize="12" Margin="0,0,8,0" Click="OpenOrganizedFolder_Click" />
-                  <ui:Button Content="开启日志资料夹" Appearance="Secondary" Height="34" FontSize="12" Click="OpenLogFolder_Click" />
+                  <ui:Button Content="重新產生說明書" Appearance="Secondary" Height="34" FontSize="12" Margin="0,0,8,0" Click="GenerateManualButton_Click" />
+                  <ui:Button Content="開啟整理資料夾" Appearance="Secondary" Height="34" FontSize="12" Margin="0,0,8,0" Click="OpenOrganizedFolder_Click" />
+                  <ui:Button Content="開啟日誌資料夾" Appearance="Secondary" Height="34" FontSize="12" Click="OpenLogFolder_Click" />
                 </WrapPanel>
               </StackPanel>
             </Border>
@@ -1583,21 +1583,21 @@
 
               <Border Grid.Column="0" Style="{StaticResource CardStyle}" Padding="16">
                 <StackPanel>
-                  <TextBlock Text="一、桌面文件整理说明" FontSize="15.5" FontWeight="SemiBold" Margin="0,0,0,8" />
-                  <TextBlock Text="• 只检查目前使用者桌面第一层，绝不移动资料夹、捷径 (.lnk)、图片、影音或应用程式执行档。" TextWrapping="Wrap" Margin="0,0,0,6" FontSize="12.5" />
-                  <TextBlock Text="• 依档案最后修改时间自动归档至「整理 Organized\yyyy年MM月」资料夹。" TextWrapping="Wrap" Margin="0,0,0,6" FontSize="12.5" />
-                  <TextBlock Text="• 正在开启或编辑中的文件会自动略过；同名但内容不同者自动加序号保留；SHA-256 相同内容者移入「重複檔 Duplicates」。" TextWrapping="Wrap" Margin="0,0,0,6" FontSize="12.5" />
-                  <TextBlock Text="• 保留最近 100 批整理纪录，随时可点击「复原上次整理」将档案放回桌面。" TextWrapping="Wrap" FontSize="12.5" Foreground="{StaticResource BrandDarkBrush}" FontWeight="Medium" />
+                  <TextBlock Text="一、桌面文件整理說明" FontSize="15.5" FontWeight="SemiBold" Margin="0,0,0,8" />
+                  <TextBlock Text="• 只檢查目前使用者桌面第一層，絕不移動資料夾、捷徑 (.lnk)、圖片、影音或應用程式執行檔。" TextWrapping="Wrap" Margin="0,0,0,6" FontSize="12.5" />
+                  <TextBlock Text="• 依檔案最後修改時間自動歸檔至「整理 Organized\yyyy年MM月」資料夾。" TextWrapping="Wrap" Margin="0,0,0,6" FontSize="12.5" />
+                  <TextBlock Text="• 正在開啟或編輯中的文件會自動略過；同名但內容不同者自動加序號保留；SHA-256 相同內容者移入「重複檔 Duplicates」。" TextWrapping="Wrap" Margin="0,0,0,6" FontSize="12.5" />
+                  <TextBlock Text="• 保留最近 100 批整理紀錄，隨時可點擊「復原上次整理」將檔案放回桌面。" TextWrapping="Wrap" FontSize="12.5" Foreground="{StaticResource BrandDarkBrush}" FontWeight="Medium" />
                 </StackPanel>
               </Border>
 
               <Border Grid.Column="2" Style="{StaticResource CardStyle}" Padding="16">
                 <StackPanel>
-                  <TextBlock Text="二、安全效能守护说明" FontSize="15.5" FontWeight="SemiBold" Margin="0,0,0,8" />
-                  <TextBlock Text="• 专为 8GB RAM、256GB SSD 办公电脑最佳化，即时监控 CPU、记忆体与磁碟 I/O 压力。" TextWrapping="Wrap" Margin="0,0,0,6" FontSize="12.5" />
-                  <TextBlock Text="• 仅对非前景且长时间高耗能的背景程式暂时调降排程优先权，并提升目前前景程式反应流畅度。" TextWrapping="Wrap" Margin="0,0,0,6" FontSize="12.5" />
-                  <TextBlock Text="• 严格安全承诺：绝不强制关闭应用程式、不清空 Windows Standby 快取、不停用 Pagefile 或系统服务。" TextWrapping="Wrap" Margin="0,0,0,6" FontSize="12.5" />
-                  <TextBlock Text="• 所有优先权调整皆为暂时性，停止监控或点击「还原暂时设定」即可立即恢复。" TextWrapping="Wrap" FontSize="12.5" Foreground="{StaticResource BrandDarkBrush}" FontWeight="Medium" />
+                  <TextBlock Text="二、安全效能守護說明" FontSize="15.5" FontWeight="SemiBold" Margin="0,0,0,8" />
+                  <TextBlock Text="• 專為 8GB RAM、256GB SSD 辦公電腦最佳化，即時監控 CPU、記憶體與磁碟 I/O 壓力。" TextWrapping="Wrap" Margin="0,0,0,6" FontSize="12.5" />
+                  <TextBlock Text="• 僅對非前景且長時間高耗能的背景程式暫時調降排程優先權，並提升目前前景程式反應流暢度。" TextWrapping="Wrap" Margin="0,0,0,6" FontSize="12.5" />
+                  <TextBlock Text="• 嚴格安全承諾：絕不強制關閉應用程式、不清空 Windows Standby 快取、不停用 Pagefile 或系統服務。" TextWrapping="Wrap" Margin="0,0,0,6" FontSize="12.5" />
+                  <TextBlock Text="• 所有優先權調整皆為暫時性，停止監控或點擊「還原暫時設定」即可立即恢復。" TextWrapping="Wrap" FontSize="12.5" Foreground="{StaticResource BrandDarkBrush}" FontWeight="Medium" />
                 </StackPanel>
               </Border>
             </Grid>
