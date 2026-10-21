@@ -1,0 +1,1 @@
+AI Tools|desktop.ini|desktop.ini|Epson Manuals.lnk|EPSON 原廠高容量碳粉匣|Epson_AL-M310DN_EA_12_Web.exe|Excel.lnk|Google Chrome.lnk|LINE.lnk|Microsoft Edge.lnk|PdfCraft.lnk|PDF格式转换器.lnk|PDF阅读编辑器.lnk|PowerPoint.lnk|Word.lnk|立即整理桌面 Organize Now.lnk|桌面整理工具說明書 Manual.txt|復原上次整理 Undo Organize.lnk|整理 Organized|應用程式|鎖定解鎖排版 Lock Layout.lnk|釋放記憶體 FreeRAM.lnk
